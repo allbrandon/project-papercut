@@ -14,14 +14,17 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: #64BD79;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  background: #64BD79;
+  font-family: 'Lato', sans-serif;
 }
 
 .App-link {
@@ -35,4 +38,114 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Greeting {
+  position: fixed;
+  width: 140px;
+  height: 36px;
+  left: 5%;
+  top: 10%;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+}
+.Enjoy {
+  position: fixed;
+  width: 140px;
+  height: 36px;
+  left: 5%;
+  top: 15%;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 29px;
+}
+
+.Profile-icon {
+  position: fixed;
+  left: 90%;
+  right: 9.37%;
+  top: 5%;
+  bottom: 9.37%;
+
+  /* White */
+  background: #64BD79;
+}
+
+.Three-Bars {
+  position: fixed;
+  left: 5%;
+  right: 12.5%;
+  top: 5%;
+  bottom: 25%;
+
+  /* White */
+  background: #64BD79;
+}
+
+.Card {
+  position: absolute;
+  height: 671px;
+  left: 0px;
+  right: 0px;
+  top: 194px;
+
+  /* Light Gray White */
+  background: #F8F9FA;
+  border-radius: 16px;
+}
+
+.ReceiptsTitle {
+  position: fixed;
+  width: 52px;
+  height: 17.66px;
+  left: 10%;
+  top: 28%;
+
+  /* 14pt Lato */
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  /* Gray 1 */
+  color: #878E95;
+} 
+
+.OrderDropDown {
+  position: fixed;
+  width: 90px;
+  height: 17.66px;
+  left: 70%;
+  top: 28%;
+
+  /* 14pt Lato */
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  /* Gray 1 */
+  color: #878E95;
+
+} 
+.display-flex {
+  display: flex; 
+  justify-content: center;
+} 
+.Text {
+  /* 14pt Lato */
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 17px;
+  color: #4A5056;
 }
