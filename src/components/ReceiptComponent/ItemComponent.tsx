@@ -19,8 +19,18 @@ function ItemComponentfunc (quantity: number, item: string, price: number, disco
     );
 };
 
-const ItemComponent = (quantity, item, price, discount, discountamount, description) => {
-    return ItemComponentfunc(quantity, item, price, discount, discountamount, description);
+class ItemComponent extends React.Component {
+    state = { loading: true, quantity: 0, item: "", price: 0, discount: "", discountamount: 0, description: ""};
+
+    render(){
+        if (this.state.loading) {
+            return <h1>loading ...</h1>;
+          }
+      
+        const { quantity, item, price, discount, discountamount, description } = this.state;
+
+        return ItemComponentfunc(quantity, item, price, discount, discountamount, description);
+    }
 }
 
 export default ItemComponent;
