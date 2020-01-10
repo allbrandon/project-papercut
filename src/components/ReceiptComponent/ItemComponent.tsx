@@ -1,6 +1,15 @@
 import React from "react";
 import './Item.css';
 
+export interface itemInfo {
+    quantity: number;
+    item: string;
+    price: number;
+    discount: string;
+    discountamount: number;
+    description: string;
+}
+
 function ItemComponentfunc (quantity: number, item: string, price: number, discount: string, discountamount: number, description: string) {
     return (
         <div>
@@ -19,17 +28,21 @@ function ItemComponentfunc (quantity: number, item: string, price: number, disco
     );
 };
 
-class ItemComponent extends React.Component {
-    state = { loading: true, quantity: 0, item: "", price: 0, discount: "", discountamount: 0, description: ""};
+class ItemComponent extends React.Component<itemInfo> {
+    state = { loading: true };
+
+    componentDidMount(){
+        this.setState({
+            loading: false
+        });
+    }
 
     render(){
         if (this.state.loading) {
             return <h1>loading ...</h1>;
         }
-      
-        const { quantity, item, price, discount, discountamount, description } = this.state;
 
-        return ItemComponentfunc(quantity, item, price, discount, discountamount, description);
+        return ItemComponentfunc(this.props.quantity, this.props.item, this.props.price, this.props.discount, this.props.discountamount, this.props.description);
     }
 }
 
