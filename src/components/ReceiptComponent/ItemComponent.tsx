@@ -25,7 +25,7 @@ class ItemComponent extends React.Component {
     render(){
         if (this.state.loading) {
             return <h1>loading ...</h1>;
-          }
+        }
       
         const { quantity, item, price, discount, discountamount, description } = this.state;
 
