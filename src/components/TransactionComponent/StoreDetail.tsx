@@ -9,7 +9,7 @@ interface Store_details {
     abn: string
 };
 
-const StoreDetail = ({details}:{detail: Store_details}) => {
+const StoreDetail = ({details}:{details: Store_details}) => {
     return (
         <div>
             <p>{details.name}</p>
