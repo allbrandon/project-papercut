@@ -1,4 +1,9 @@
 
+br {
+    display: block;
+    margin: 10px 0;
+ }
+ 
 .general-item-info {
     max-width: 311px;
     padding-left: 35px;
