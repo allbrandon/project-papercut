@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemComponent  from '../components/ReceiptComponent/ItemComponent'
 import ItemListComponent from '../components/ReceiptComponent/ItemListComponent'
-import { withKnobs, number, text, object, array } from "@storybook/addon-knobs";
+import { withKnobs, number, text, array } from "@storybook/addon-knobs";
 
 const item_one = {
   quantity: 8,
