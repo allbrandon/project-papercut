@@ -16,9 +16,9 @@ const woolies_store_info = {
     abn: "88 000 014 675"
 }
 
-export const store_detail = () => {
+export const store_detail = () => (
     <StoreDetail details={object("store info", woolies_store_info, "Woolworths 1")}/>
-}
+);
 
 const item_one = {
   quantity: 8,
@@ -61,7 +61,7 @@ const woolies_cash_transaction = {
     store_details: woolies_store_info,
 }
 
-export const cash = () => {
+export const cash = () => (
     // parameter: name of store, time of transaction, store category, item list, total, cash, store details
     <CashTransactions details={object("transaction details", woolies_cash_transaction, "woolworths transaction 1")}/>
-};
+);
