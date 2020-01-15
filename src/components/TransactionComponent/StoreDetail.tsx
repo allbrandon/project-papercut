@@ -9,14 +9,14 @@ interface Store_details {
     abn: string
 };
 
-const StoreDetail = ({detail}:{detail: Store_details}) => {
+const StoreDetail = ({details}:{detail: Store_details}) => {
     return (
         <div>
-            <p>{detail.name}</p>
-            <p>{detail.shopping_centre}</p>
-            <p>{detail.address}</p>
-            <p>{detail.number}</p>
-            <p>{detail.abn}</p>
+            <p>{details.name}</p>
+            <p>{details.shopping_centre}</p>
+            <p>{details.address}</p>
+            <p>{details.number}</p>
+            <p>{details.abn}</p>
         </div>
     );
 }
