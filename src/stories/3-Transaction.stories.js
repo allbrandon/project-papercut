@@ -9,6 +9,7 @@ export default {
 };
 
 const woolies_store_info = {
+    id: 1,
     name: "Woolworths Supermarkets",
     shopping_centre: "1310 Bathurst City Centre",
     address: "210 Howick Street",
@@ -20,6 +21,7 @@ export const store_detail = () => (
     <StoreDetail details={object("store info", woolies_store_info, "Woolworths 1")}/>
 );
 
+// getting the receipt list data ready
 const item_one = {
   quantity: 8,
   item: "Cashew Nuts", 
@@ -52,12 +54,17 @@ const item_four = {
 
 const item_array = [item_one, item_two, item_three, item_four] ;
 
+// detail of transaction
 const woolies_cash_transaction = {
+    id: 10,
     trans_time: "11/02/19 1:05PM",
+    // need to add restriction on what are the possible categories
     store_category: "Grocery",
-    items: item_array,
-    total: 109.59,
-    cash: 120.00,
+    // item list detail
+    item_list: item_array,
+    cash: 100.00,
+    // should be able to find store_details using store_id
+    store_id: 1,
     store_details: woolies_store_info,
 }
 

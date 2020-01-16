@@ -2,7 +2,7 @@ import React from "react";
 import ItemComponent from './ItemComponent';
 import './Item.css';
 
-interface ReceiptComponent {
+export interface ReceiptComponent {
     quantity: number;
     item: string;
     price: number;
