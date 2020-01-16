@@ -13,14 +13,25 @@ br {
     font-weight: bold;
     font-size: 14px;
     line-height: 14px;
-    color: #4D9A5F;
 
     display: flex;
     justify-content: flex-start;
 }
 
-.circle {
+.green-circle {
     background: #b7ebc4;
+    color: #4D9A5F;
+    
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.red-circle {
+    background: #E9ACAB;
+    color: #A93029;
     
     width: 24px;
     height: 24px;
