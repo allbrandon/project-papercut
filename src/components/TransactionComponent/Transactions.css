@@ -1,0 +1,17 @@
+.store-detail {
+
+    /* 14pt Lato */
+    font-family: Lato;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    /* Dark Gray 1 */
+    color: #353A3F;
+
+}
+
+.store-detail-name {
+    font-weight: bold;
+}

@@ -11,12 +11,12 @@ interface Store_details {
 
 const StoreDetail = ({details}:{details: Store_details}) => {
     return (
-        <div>
-            <p>{details.name}</p>
-            <p>{details.shopping_centre}</p>
-            <p>{details.address}</p>
-            <p>{details.number}</p>
-            <p>{details.abn}</p>
+        <div className="store-detail">
+            <div className="store-detail-name">{details.name}</div>
+            <div>{details.shopping_centre}</div>
+            <div>{details.address}</div>
+            <div>TEL {details.number}</div>
+            <div>ABN {details.abn}</div>
         </div>
     );
 }
