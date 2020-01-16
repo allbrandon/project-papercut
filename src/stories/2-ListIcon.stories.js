@@ -1,9 +1,11 @@
 import React from 'react';
 import ItemComponent  from '../components/ReceiptComponent/ItemComponent'
 import ItemListComponent from '../components/ReceiptComponent/ItemListComponent'
-import { withKnobs, number, text, array } from "@storybook/addon-knobs";
+import { withKnobs, number, text, array, boolean } from "@storybook/addon-knobs";
 
+// aLL the receipt item objects
 const item_one = {
+  color: true,
   quantity: 8,
   item: "Cashew Nuts", 
   price: 10.0,
@@ -13,12 +15,14 @@ const item_one = {
 };
 
 const item_two = {
+  color: true,
   quantity: 2,
   item: "Bok Choy", 
   price: 2.0
 }
 
 const item_three = {
+  color: true,
   quantity: 1,
   item: "Nectarine White Flesh", 
   price: 3.75,
@@ -26,6 +30,7 @@ const item_three = {
 }
 
 const item_four = {
+  color: true,
   quantity: 1,
   item: "Maple Syrup", 
   price: 3.5,
@@ -33,6 +38,7 @@ const item_four = {
   discountamount: -1.0
 }
 
+// the list of receipt items
 const item_array = [item_one, item_two, item_three, item_four] ;
 
 export default {
@@ -41,7 +47,7 @@ export default {
 };
 
 export const item = () => (
-  <ItemComponent quantity={number("Quantity", 8)} item={text("Item", "Cashew Nuts", 0)} price={number("Price", 10.0)} discount={text("Discount", "1/2 Special Discount", 0)} discountamount={number("Discount Amount", -5.0)} description={text("Description", "0.962 kg @ $3.90/kg", 0)}/>
+  <ItemComponent color={boolean("Color",true,"colour-tag")} quantity={number("Quantity", 8)} item={text("Item", "Cashew Nuts", 0)} price={number("Price", 10.0)} discount={text("Discount", "1/2 Special Discount", 0)} discountamount={number("Discount Amount", -5.0)} description={text("Description", "0.962 kg @ $3.90/kg", 0)}/>
 );
 
 export const itemList = () => (
