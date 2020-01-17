@@ -1,0 +1,30 @@
+
+
+.greeting__a {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #F8F9FA;
+    padding-left: 10%;
+}
+
+.greeting__b {
+    /* 24pt Lato */
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    padding-left: 10%;
+    /* identical to box height */
+
+    /* Background Grey */
+    color: #F8F9FA;
+}
+
+.nav {
+    display: flex; 
+    justify-content: space-between;
+}

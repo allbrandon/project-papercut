@@ -1,0 +1,39 @@
+.card__container {
+    display: grid; 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    max-width: 200px;
+    min-width: 200px;
+    max-height:40px;
+    background: #FFFFFF;
+    padding: 20px 80px 20px 20px;
+    grid-template-columns: 30px 150px 100px; 
+    grid-gap: 5px;
+    font-family: Lato;
+    font-style: normal;     
+} 
+
+.a {
+    font-weight: 500;
+    font-size: 17px;
+    color: #4A5056;
+} 
+
+.b {
+    color: #878E95;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.c {
+    font-weight: 500;
+    font-size: 17px;
+    color: #4A5056;
+    text-align : center;
+}
+.d {
+    color: #878E95;
+    font-weight: normal;
+    font-size: 15px;
+    text-align : center;
+}
