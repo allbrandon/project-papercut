@@ -12,12 +12,14 @@ const ReceiptListComponent = (props:any) => {
         items: "Bok Choy, Maple Syrup", 
         date: "11/02/19",
         total: 35,
+        id: 1,
     }, 
     {
         store: "Woolworths",
         items: "Bok Choy, Maple Syrup", 
         date: "11/02/19",
         total: 35,
+        id: 2,
 
     }]
     return (
@@ -28,7 +30,7 @@ const ReceiptListComponent = (props:any) => {
         </div> */}
         <div className="list__container">
             {items.map(receipt => (
-                <ReceiptCardComponent items={receipt.items} total={receipt.total} date={receipt.date} store={receipt.store} />
+                <ReceiptCardComponent items={receipt.items} total={receipt.total} date={receipt.date} store={receipt.store} id={receipt.id} />
             ))}
         </div>
         </>

@@ -1,7 +1,8 @@
 import React from 'react'; 
 import './HeaderComponent.scss';
-import HamburgerMenuComponent from './HamburgerMenuComponent';
+// import HamburgerMenuComponent from './HamburgerMenuComponent';
 import ProfileIcon from './Profile.svg'
+import Burger from './Burger.svg'
 
 
 
@@ -11,7 +12,8 @@ const HeaderComponent = (props:any) => {
     return (
     <div className="header__container">
         <div className="nav">
-        <HamburgerMenuComponent />
+        {/* <HamburgerMenuComponent /> */}
+        <img src={Burger} alt=""></img>
         <img src={ProfileIcon} alt=""></img>
         </div>
         <h1 className="greeting__a">Hi {name}</h1> 
