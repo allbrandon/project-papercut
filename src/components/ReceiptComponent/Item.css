@@ -1,35 +1,31 @@
-
 br {
-    display: block;
-    margin: 10px 0;
- }
- 
+  display: block;
+  margin: 10px 0;
+}
+
 .general-item-info {
-    max-width: 311px;
-    padding-left: 35px;
+  max-width: 311px;
+  padding-left: 35px;
 
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 14px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
 
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
-.green-circle {
-    background: #b7ebc4;
-    color: #4D9A5F;
-    
-    width: 24px;
-    height: 24px;
-    border-radius: 100px;
-    text-align: center;
-    line-height: 24px;
+.number-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  text-align: center;
+  line-height: 24px;
 }
 
-.red-circle {
+/* .red-circle {
     background: #E9ACAB;
     color: #A93029;
     
@@ -38,64 +34,62 @@ br {
     border-radius: 100px;
     text-align: center;
     line-height: 24px;
-}
+} */
 
 .name {
-    width: 255px;
-
-    padding-left:16px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #4A5056;
+  width: 255px;
+  padding-left: 16px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4a5056;
 }
 
 .price {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #4A5056;
-    text-align: right;
-
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4a5056;
+  text-align: right;
 }
 
-.discount-info{
-    max-width: 262px;
-    padding-left:84px;
+.discount-info {
+  max-width: 262px;
+  padding-left: 84px;
 
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
 
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 
-    color: #AEB5BC;
+  color: #aeb5bc;
 }
 
-.discount{
-    width: 257px;
+.discount {
+  width: 257px;
 }
 
-.discount-amount{
-    text-align: right;
+.discount-amount {
+  text-align: right;
 }
 
-.description-info{
-    max-width: 311px;
+.description-info {
+  max-width: 311px;
 
-    padding-left:84px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
+  padding-left: 84px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
 
-    color: #AEB5BC;
+  color: #aeb5bc;
 }
