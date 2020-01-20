@@ -16,6 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "format": "prettier --write \"src/**/*.{js,jsx,tsx}\"",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -35,6 +37,9 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "prettier": "^1.19.1",
     "@storybook/addon-actions": "^5.2.8",
     "@storybook/addon-knobs": "^5.2.8",
     "@storybook/addon-links": "^5.2.8",

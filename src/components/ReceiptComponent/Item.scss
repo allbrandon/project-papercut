@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+.general-item-info {
+  max-width: 311px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.number-circle {
+  width: 30px;
+  height: 28px;
+  border-radius: 2000px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.name {
+  width: 255px;
+  padding-left: $spacing-xs;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $font-size-xxs;
+  line-height: $spacing-s;
+  color: #4a5056;
+}
+
+.price {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $font-size-xxs;
+  line-height: $spacing-s;
+  color: #4a5056;
+  text-align: right;
+}
+
+.discount-info {
+  max-width: 262px;
+  padding-left: $spacing-xl;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+
+  display: flex;
+  justify-content: flex-start;
+
+  color: #aeb5bc;
+}
+
+.discount {
+  width: 257px;
+}
+
+.discount-amount {
+  text-align: right;
+}
+
+.description-info {
+  max-width: 311px;
+
+  padding-left: $spacing-xl;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-xxxxs;
+  line-height: $spacing-xs;
+
+  color: #aeb5bc;
+}

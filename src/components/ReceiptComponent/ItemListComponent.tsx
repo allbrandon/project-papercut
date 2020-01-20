@@ -1,30 +1,34 @@
 import React from "react";
-import ItemComponent from './ItemComponent';
-import './Item.css';
+import ItemComponent, { ItemComponentProps } from "./ItemComponent";
+import "./Item.scss";
 
-export interface ReceiptComponent {
-    quantity: number;
-    item: string;
-    price: number;
-    discount: string;
-    discountamount: number;
-    description: string;
-}
+// variables that are common to every single item in receipts
+type ItemListComponentProps = {
+  items: Array<ItemComponentProps>;
+};
 
-const ItemListComponent = ({items}:{items:Array<ReceiptComponent>}) => {
-
-    return (
+// returns all the items in 1 single transaction
+// take in a list/array of items and make it a list
+const ItemListComponent = ({ items }: ItemListComponentProps) => {
+  return (
+    <div>
+      {items.map(item => (
         <div>
-            {
-                items.map( info => (
-                    <div>
-                        <ItemComponent quantity={info.quantity} item={info.item} price={info.price} discount={info.discount} discountamount={info.discountamount} description={info.description} />
-                        <br />
-                    </div>
-                ))
-            }
+          <ItemComponent
+            circleTextColor={item.circleTextColor}
+            circleColor={item.circleColor}
+            quantity={item.quantity}
+            item={item.item}
+            price={item.price}
+            discount={item.discount}
+            discountAmount={item.discountAmount}
+            description={item.description}
+          />
+          <br />
         </div>
-    );
-}
+      ))}
+    </div>
+  );
+};
 
 export default ItemListComponent;
