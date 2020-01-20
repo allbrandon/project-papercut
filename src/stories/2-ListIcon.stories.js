@@ -5,7 +5,6 @@ import { withKnobs, number, text, array, color } from "@storybook/addon-knobs";
 
 // aLL the receipt item objects
 const item_one = {
-  color: true,
   quantity: 8,
   item: "Cashew Nuts",
   price: 10.0,
@@ -15,14 +14,12 @@ const item_one = {
 };
 
 const item_two = {
-  color: true,
   quantity: 2,
   item: "Bok Choy",
   price: 2.0
 };
 
 const item_three = {
-  color: true,
   quantity: 1,
   item: "Nectarine White Flesh",
   price: 3.75,
@@ -30,7 +27,6 @@ const item_three = {
 };
 
 const item_four = {
-  color: true,
   quantity: 1,
   item: "Maple Syrup",
   price: 3.5,
@@ -43,7 +39,7 @@ const item_array = [item_one, item_two, item_three, item_four];
 
 export default {
   title: "Single list items",
-  gidecorators: [withKnobs]
+  decorators: [withKnobs]
 };
 
 export const item = () => (

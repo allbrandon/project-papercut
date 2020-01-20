@@ -1,5 +1,5 @@
 import React from "react";
-import "./Item.css";
+import "./Item.scss";
 
 // returns 1 single item in the receipt
 // takes color "to symbolise cash/card payment", quantity "how many you bought", item "name of the item you purchased", price "the default price of the item",
@@ -17,8 +17,8 @@ export type ItemComponentProps = {
   description?: string;
 };
 const ItemComponent = ({
-  circleColor,
-  circleTextColor,
+  circleColor = "#B7EBC4",
+  circleTextColor = "#4D9A5F",
   quantity,
   item,
   price,
@@ -27,18 +27,27 @@ const ItemComponent = ({
   description
 }: ItemComponentProps) => {
   let discountString: string;
-  const circleStyle = {
-    background: circleColor,
-    color: circleTextColor
-  };
+  let quantityString: string;
+  let circleFontSize: string;
   if (discountAmount) {
     discountString = (discountAmount as number).toFixed(2);
   }
+  if (quantity > 99) {
+    quantityString = "99+";
+    circleFontSize = "1rem";
+  } else {
+    quantityString = quantity.toString();
+  }
+  const circleStyle = {
+    background: circleColor,
+    color: circleTextColor,
+    fontSize: circleFontSize
+  };
   return (
     <div>
       <div className="general-item-info">
         <span style={circleStyle} className="number-circle">
-          {quantity}
+          {quantityString}
         </span>
         <span className="name">{item}</span>
         <span className="price">{price.toFixed(2)}</span>
