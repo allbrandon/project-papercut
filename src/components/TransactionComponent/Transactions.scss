@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+/* for all */
+html {
+  font-size: 62.5%;
+}
+
+.background {
+  background: #f8f9fa;
+}
+
+/* for StoreDetail.tsx */
+.store-detail {
+  /* 14pt Lato */
+  font-family: Lato;
+  font-style: normal;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+  text-align: center;
+
+  /* Dark Gray 1 */
+  color: #353a3f;
+}
+
+.store-detail-name {
+  font-weight: bold;
+}
+
+// for Heading.tsx
+.back-button-padding {
+  padding-left: $spacing-s;
+  padding-top: $spacing-s;
+}
+
+.back-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 2000px;
+  text-align: center;
+  line-height: 28px;
+  background: #b7ebc4;
+}
+
+.heading-store-name {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: $font-size-xs;
+  line-height: $spacing-s;
+  text-align: center;
+
+  color: #f8f9fa;
+}
+
+.heading-transaction-time {
+  /* 16pt Lato */
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-xxs;
+  line-height: $spacing-xs;
+  text-align: center;
+
+  /* Light Accent Green 2 */
+  color: #b7ebc4;
+}

@@ -1,28 +1,35 @@
 import React from "react";
-import './Transactions.css';
+import "./Transactions.scss";
 
 // Parameter: An object that contains Store_details
 // Restrictions: number should be in format of xx xxxx xxxx OR xxxx xxx xxx
 //               abn must be in format of xx xxx xxx xxx
-export interface Store_details {
-    id: number, 
-    name: string,
-    shopping_centre: string,
-    address: string,
-    number: string,
-    abn: string
+export type StoreDetailsProps = {
+  id: number;
+  name: string;
+  shoppingCentre?: string;
+  address: string;
+  number: string;
+  abn: string;
 };
 
-const StoreDetail = ({details}:{details: Store_details}) => {
-    return (
-        <div className="store-detail">
-            <div className="store-detail-name">{details.name}</div>
-            <div>{details.shopping_centre}</div>
-            <div>{details.address}</div>
-            <div>TEL {details.number}</div>
-            <div>ABN {details.abn}</div>
-        </div>
-    );
-}
+const StoreDetail = ({
+  id,
+  name,
+  shoppingCentre,
+  address,
+  number,
+  abn
+}: StoreDetailsProps) => {
+  return (
+    <div className="store-detail">
+      <div className="store-detail-name">{name}</div>
+      <div>{shoppingCentre}</div>
+      <div>{address}</div>
+      <div>TEL {number}</div>
+      <div>ABN {abn}</div>
+    </div>
+  );
+};
 
 export default StoreDetail;
