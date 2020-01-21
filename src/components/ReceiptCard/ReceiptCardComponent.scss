@@ -1,3 +1,4 @@
+// @import "../../variables.scss";
 .card__container {
     display: grid; 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -13,25 +14,25 @@
     font-style: normal;     
 } 
 
-.a {
+.store {
     font-weight: 500;
     font-size: 17px;
     color: #4A5056;
 } 
 
-.b {
+.items {
     color: #878E95;
     font-weight: normal;
     font-size: 15px;
 }
 
-.c {
+.total {
     font-weight: 500;
     font-size: 17px;
     color: #4A5056;
     text-align : center;
 }
-.d {
+.date {
     color: #878E95;
     font-weight: normal;
     font-size: 15px;

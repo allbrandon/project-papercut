@@ -1,27 +1,27 @@
 import React from 'react'; 
 import './ReceiptListComponent.scss'
-import ReceiptCardComponent from './ReceiptCard/ReceiptCardComponent'
+import ReceiptCardComponent, {ReceiptCardProps} from './ReceiptCard/ReceiptCardComponent'
 
+type ReceiptListComponentProps = {
+    items: Array<ReceiptCardProps>
+}
 
+export const ReceiptListComponent = ({items}:ReceiptListComponentProps) => { 
+    // const items = [{
+    //     store: "Woolworths",
+    //     items: "Bok Choy, Maple Syrup", 
+    //     date: "11/02/19",
+    //     total: 35,
+    //     id: 1,
+    // }, 
+    // {
+    //     store: "Woolworths",
+    //     items: "Bok Choy, Maple Syrup", 
+    //     date: "11/02/19",
+    //     total: 35,
+    //     id: 2,
 
-
-
-const ReceiptListComponent = (props:any) => { 
-    const items = [{
-        store: "Woolworths",
-        items: "Bok Choy, Maple Syrup", 
-        date: "11/02/19",
-        total: 35,
-        id: 1,
-    }, 
-    {
-        store: "Woolworths",
-        items: "Bok Choy, Maple Syrup", 
-        date: "11/02/19",
-        total: 35,
-        id: 2,
-
-    }]
+    // }]
     return (
         <>
         {/* <div className="list__header">

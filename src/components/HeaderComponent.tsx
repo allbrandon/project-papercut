@@ -8,7 +8,6 @@ import Burger from './Burger.svg'
 
 
 const HeaderComponent = (props:any) => { 
-    const name = "Austin"
     return (
     <div className="header__container">
         <div className="nav">
@@ -16,8 +15,8 @@ const HeaderComponent = (props:any) => {
         <img src={Burger} alt=""></img>
         <img src={ProfileIcon} alt=""></img>
         </div>
-        <h1 className="greeting__a">Hi {name}</h1> 
-        <h1 className="greeting__b">Enjoy your digital receipts</h1>
+        <h1 className="greeting__a">Hi {props.name}</h1> 
+        <h2 className="greeting__b">Enjoy your digital receipts</h2>
 
     </div>
 
