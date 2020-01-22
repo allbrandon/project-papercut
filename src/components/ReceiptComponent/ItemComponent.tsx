@@ -26,17 +26,31 @@ const ItemComponent = ({
   discountAmount,
   description
 }: ItemComponentProps) => {
+  // below are some parameter passing for testing
+  // circleColor = "#E9ACAB";
+  // circleTextColor = "#A93029";
+  // quantity = 6;
+  // item = "Cashew Nuts";
+  // price = 10.0;
+  // discount = "1/2 Special Discount";
+  // discountAmount = -5.0;
+  // description = "0.962 kg @ $3.90/kg";
+  // end of testing
+
   let discountString: string;
   let quantityString: string;
   let circleFontSize: string;
   if (discountAmount) {
     discountString = (discountAmount as number).toFixed(2);
+  } else {
+    discountString = "";
   }
   if (quantity > 99) {
     quantityString = "99+";
     circleFontSize = "1rem";
   } else {
     quantityString = quantity.toString();
+    circleFontSize = "1.4rem";
   }
   const circleStyle = {
     background: circleColor,
