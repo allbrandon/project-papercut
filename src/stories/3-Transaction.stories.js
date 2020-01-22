@@ -1,6 +1,7 @@
 import React from "react";
 import StoreDetail from "../components/TransactionComponent/StoreDetail";
 import Heading from "../components/TransactionComponent/Heading";
+import ReceiptDetail from "../components/TransactionComponent/ReceiptDetail";
 import { withKnobs, number, text, color } from "@storybook/addon-knobs";
 
 export default {
@@ -30,7 +31,7 @@ export const store_detail = () => (
 
 const heading_info = {
   id: 1,
-  logo: "woolworths.jpg",
+  logo: "woolworths.png",
   name: "Woolworths Supermarkets",
   transactionTime: "11/02/19 1:05PM"
 };
@@ -38,8 +39,12 @@ const heading_info = {
 export const heading = () => (
   <Heading
     id={number("id", 1)}
-    logo={text("LogoPicture", "woolworths.jpg", 0)}
+    logo={text("Logo Picture", "woolworths.png", 0)}
     name={text("Name", "Woolworths Supermarkets", 0)}
     transactionTime={text("Transaction Time", "11/02/19 1:05PM", 0)}
   />
+);
+
+export const itemList = () => (
+  <ReceiptDetail category={text("Category", "Grocery", 0)} />
 );

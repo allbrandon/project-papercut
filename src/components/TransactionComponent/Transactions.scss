@@ -42,6 +42,54 @@ html {
   background: #b7ebc4;
 }
 
+.arrow-left {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 14px;
+  height: 14px;
+}
+
+.arrow-left::after,
+.arrow-left::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.arrow-left::after {
+  width: 11px;
+  height: 11px;
+  bottom: 1.5px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  color: #64bd79;
+}
+
+.arrow-left::before {
+  width: 13px;
+  height: 2px;
+  bottom: 6.5px;
+  background: currentColor;
+  color: #64bd79;
+}
+
+.heading-logo-circle {
+  margin: 0 auto;
+  width: 65px;
+  height: 65px;
+  border-radius: 2000px;
+  text-align: center;
+  line-height: 65px;
+
+  position: relative;
+
+  background: #ffffff;
+}
+
 .heading-store-name {
   font-family: Lato;
   font-style: normal;
@@ -59,9 +107,14 @@ html {
   font-style: normal;
   font-weight: normal;
   font-size: $font-size-xxs;
-  line-height: $spacing-xs;
+  line-height: $spacing-s;
   text-align: center;
 
   /* Light Accent Green 2 */
   color: #b7ebc4;
+}
+
+.heading-padding {
+  height: $spacing-m;
+  width: 100%;
 }

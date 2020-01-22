@@ -31,12 +31,15 @@ const ItemComponent = ({
   let circleFontSize: string;
   if (discountAmount) {
     discountString = (discountAmount as number).toFixed(2);
+  } else {
+    discountString = "";
   }
   if (quantity > 99) {
     quantityString = "99+";
     circleFontSize = "1rem";
   } else {
     quantityString = quantity.toString();
+    circleFontSize = "1.4rem";
   }
   const circleStyle = {
     background: circleColor,
