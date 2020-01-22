@@ -9,14 +9,14 @@ export default {
   decorators: [withKnobs]
 };
 
-const woolies_store_info = {
-  id: 1,
-  name: "Woolworths Supermarkets",
-  shoppingCentre: "1310 Bathurst City Centre",
-  address: "210 Howick Street",
-  number: "02 6330 8007",
-  abn: "88 000 014 675"
-};
+// const woolies_store_info = {
+//   id: 1,
+//   name: "Woolworths Supermarkets",
+//   shoppingCentre: "1310 Bathurst City Centre",
+//   address: "210 Howick Street",
+//   number: "02 6330 8007",
+//   abn: "88 000 014 675"
+// };
 
 export const store_detail = () => (
   <StoreDetail
@@ -29,12 +29,12 @@ export const store_detail = () => (
   />
 );
 
-const heading_info = {
-  id: 1,
-  logo: "woolworths.png",
-  name: "Woolworths Supermarkets",
-  transactionTime: "11/02/19 1:05PM"
-};
+// const heading_info = {
+//   id: 1,
+//   logo: "woolworths.png",
+//   name: "Woolworths Supermarkets",
+//   transactionTime: "11/02/19 1:05PM"
+// };
 
 export const heading = () => (
   <Heading
@@ -45,6 +45,6 @@ export const heading = () => (
   />
 );
 
-export const itemList = () => (
-  <ReceiptDetail category={text("Category", "Grocery", 0)} />
-);
+// export const itemList = () => (
+//   <ReceiptDetail category={text("Category", "Grocery", 0)} />
+// );

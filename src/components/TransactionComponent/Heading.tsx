@@ -20,9 +20,6 @@ const Heading = ({
     background: backgroundColor
   };
 
-  let image_source: string;
-  image_source = "/img/" + logo;
-
   return (
     <div style={backgroundStyle}>
       <div className="back-button-padding">
@@ -31,7 +28,7 @@ const Heading = ({
         </button>
       </div>
       <div className="heading-logo-circle">
-        <img src={image_source} alt="Company Logo" />
+        <img src={logo} alt="Company Logo" />
       </div>
       <div className="heading-store-name">{name}</div>
       <div className="heading-transaction-time">{transactionTime}</div>
