@@ -13,7 +13,9 @@
 } 
 .list__header {
     display: flex;
-    justify-content: space-between; 
+    flex-flow: row nowrap;
+    
+    justify-content: flex-start; 
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
@@ -22,4 +24,4 @@
 
     /* Subheader Grey */
     color: #878E95;
-} 
+}  
