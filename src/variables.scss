@@ -1,18 +1,16 @@
-
 // Need to set root font-size of 10px, change based on screen size
 // https://engageinteractive.co.uk/blog/em-vs-rem-vs-px
 //https://gist.github.com/basham/2175a16ab7c60ce8e001
 // https://css-tricks.com/rem-global-em-local/
 
 // 1rem = 10px
-// 1.6 rem = 16px 
+// 1.6 rem = 16px
 // SET THIS IN THE MAIN CSS FILE!
 /*
 html {
   font-size: 62.5%;
   
 */
-
 
 /*------------------------------------*\
   #SPACING
@@ -26,7 +24,6 @@ $spacing-l: 4rem;
 $spacing-xl: 4.8rem;
 $spacing-xxl: 5.6rem;
 $spacing-xxxl: 6.4rem;
-
 
 /*------------------------------------*\
   #FONT-SIZE
@@ -57,32 +54,32 @@ $large-shadow-2: 0px 15px 35px rgba(0, 0, 0, 0.2);
 \*------------------------------------*/
 
 // BRAND GREEN
-$dark-accent-green: hsl(134,33, 45, 100%);
-$light-accent-green: hsl(136, 70, 95, 100%); 
-$light-accent-green-2: hsl(135, 57, 82, 100%); 
-$main-green: hsl(134, 40, 57, 100%);
-// NEUTRALS 
-$subheader-grey: hsl(210, 6, 56, 100%);
-$background-grey: hsl(210, 17, 98, 100%);
-$header-grey: hsl(210,7, 31, 100%);
+$dark-accent-green: hsl(134, 33, 45);
+$light-accent-green: hsl(136, 70, 95);
+$light-accent-green-2: hsl(135, 57, 82);
+$main-green: hsl(134, 40, 57);
+// NEUTRALS
+$subheader-grey: hsl(210, 6, 56);
+$background-grey: hsl(210, 17, 98);
+$header-grey: hsl(210, 7, 31);
 
-// ACCENTS 
-$dark-accent-red: hsl(3, 61, 41, 100%);
-$accent-red: hsl(3, 59, 51, 100%);
-$light-accent-red-1: hsl(1, 58, 79, 100%);
-$light-accent-red-2: hsl(4, 55, 94, 100%);
+// ACCENTS
+$dark-accent-red: hsl(3, 61, 41);
+$accent-red: hsl(3, 59, 51);
+$light-accent-red-1: hsl(1, 58, 79);
+$light-accent-red-2: hsl(4, 55, 94);
 
-$dark-accent-yellow: hsl(44, 50, 54, 100%);
-$accent-yellow: hsl(42, 78, 69, 100%);
-$light-accent-yellow-1: hsl(44, 85, 92, 100%);
-$light-accent-yellow-2: hsl(42, 100, 98, 100%);
+$dark-accent-yellow: hsl(44, 50, 54);
+$accent-yellow: hsl(42, 78, 69);
+$light-accent-yellow-1: hsl(44, 85, 92);
+$light-accent-yellow-2: hsl(42, 100, 98);
 
-$accent-orange: hsl(36, 70, 45, 100%);
-$accent-orange: hsl(36, 70, 57, 100%);
-$light-accent-orange-1: hsl(36, 70, 82, 100%);
-$light-accent-orange-2: hsl(36, 70, 95, 100%);
+$accent-orange: hsl(36, 70, 45);
+$accent-orange: hsl(36, 70, 57);
+$light-accent-orange-1: hsl(36, 70, 82);
+$light-accent-orange-2: hsl(36, 70, 95);
 
-$dark-accent-purple: hsl(266, 70, 45, 100%);
-$accent-purple: hsl(266, 70, 57, 100%);
-$light-accent-purple-1: hsl(266, 70, 82, 100%);
-$light-accent-purple-2: hsl(36, 70, 95, 100%);
+$dark-accent-purple: hsl(266, 70, 45);
+$accent-purple: hsl(266, 70, 57);
+$light-accent-purple-1: hsl(266, 70, 82);
+$light-accent-purple-2: hsl(36, 70, 95);
