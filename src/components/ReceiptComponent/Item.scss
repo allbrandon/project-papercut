@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+html {
+  font-size: 62.5%;
+  font-family: Lato;
+  font-style: normal;
+}
+
+.general-item-info {
+  max-width: 311px;
+  font-weight: bold;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+  display: flex;
+  justify-content: flex-start;
+
+  .name {
+    width: 255px;
+    padding-left: $spacing-xs;
+    font-weight: 500;
+    font-size: $font-size-xxs;
+    line-height: $spacing-s;
+    color: $header-grey;
+  }
+
+  .price {
+    font-weight: 500;
+    font-size: $font-size-xxs;
+    line-height: $spacing-s;
+    color: $header-grey;
+    text-align: right;
+  }
+  .number-circle {
+    border-radius: 50%;
+    /* remove if you don't care about IE8 */
+    width: 11px;
+    height: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.discount-info {
+  max-width: 262px;
+  padding-left: $spacing-xl;
+  font-weight: normal;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+
+  display: flex;
+  justify-content: space-between;
+  color: $subheader-grey;
+}
+
+.description-info {
+  max-width: 311px;
+  padding-left: $spacing-xl;
+  font-weight: normal;
+  font-size: $font-size-xxxxs;
+  line-height: $spacing-xs;
+  color: $subheader-grey;
+}
