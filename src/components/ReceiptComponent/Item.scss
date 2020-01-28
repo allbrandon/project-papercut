@@ -21,14 +21,14 @@ html {
     font-weight: 500;
     font-size: $font-size-xxs;
     line-height: $spacing-s;
-    color: #4a5056;
+    color: $header-grey;
   }
 
   .price {
     font-weight: 500;
     font-size: $font-size-xxs;
     line-height: $spacing-s;
-    color: #4a5056;
+    color: $header-grey;
     text-align: right;
   }
   .number-circle {
@@ -52,7 +52,7 @@ html {
 
   display: flex;
   justify-content: space-between;
-  color: #aeb5bc;
+  color: $subheader-grey;
 }
 
 .description-info {
@@ -61,5 +61,5 @@ html {
   font-weight: normal;
   font-size: $font-size-xxxxs;
   line-height: $spacing-xs;
-  color: #aeb5bc;
+  color: $subheader-grey;
 }
