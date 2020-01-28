@@ -39,7 +39,6 @@ export const store_detail = () => (
 export const heading = () => (
   <Heading
     id={number("id", 1)}
-    logo={text("Logo Picture", "woolworths.png", 0)}
     name={text("Name", "Woolworths Supermarkets", 0)}
     transactionTime={text("Transaction Time", "11/02/19 1:05PM", 0)}
   />
