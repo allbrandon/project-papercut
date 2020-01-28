@@ -1,10 +1,10 @@
-// @import "../../variables.scss";
+@import "../../variables";
 .card__container {
     display: grid; 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: $button-shadow;
     border-radius: 8px;
     max-width: 200px;
-    min-width: 200px;
+    min-width: 0px;
     max-height:40px;
     background: #FFFFFF;
     padding: 20px 80px 20px 20px;
@@ -17,25 +17,25 @@
 
 .store {
     font-weight: 500;
-    font-size: 17px;
+    font-size: $font-size-xxxxxs;
     color: #4A5056;
 } 
 
 .items {
     color: #878E95;
     font-weight: normal;
-    font-size: 15px;
+    font-size: $font-size-xxxxxs;
 }
 
 .total {
     font-weight: 500;
-    font-size: 17px;
+    font-size: $font-size-xxxxxs;
     color: #4A5056;
     text-align : center;
 }
 .date {
     color: #878E95;
     font-weight: normal;
-    font-size: 15px;
+    font-size: $font-size-xxxxxs;
     text-align : center;
 }

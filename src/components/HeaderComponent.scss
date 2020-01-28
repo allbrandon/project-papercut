@@ -1,13 +1,12 @@
-
-
+@import "../variables";
 .greeting__a {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: $font-size-s;
     line-height: 36px;
     color: #F8F9FA;
-    padding-left: 10%;
+    padding-left: $spacing-s;
 }
 
 .greeting__b {
@@ -15,17 +14,15 @@
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: $font-size-xxs;
     line-height: 29px;
-    padding-left: 10%;
-    /* identical to box height */
-
-    /* Background Grey */
+    padding-left: $spacing-s;
     color: #F8F9FA;
 }
 
 .nav {
-    padding: 3vh 6vw 6vw;
+    // padding: 3vh 6vw 6vw;
+    padding: $spacing-s $spacing-xs $spacing-xs;
     display: flex; 
     justify-content: space-between;
 }

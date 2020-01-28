@@ -18,7 +18,7 @@ const HeaderComponent = (props:any) => {
         <IconComponent type="Burger" size="small" />
         <Link to='/profile'>
             {/* <img src={ProfileIcon} alt=""></img> */}
-            <IconComponent type="Profile" size="small" />
+            <IconComponent type="Profile"  size="small" />
         </Link>
         </div>
         <h1 className="greeting__a">Hi {props.name}</h1> 

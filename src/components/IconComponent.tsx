@@ -1,7 +1,7 @@
 import React from 'react';
 
 type IconComponentProps = {
-    type: string, 
+    type: string,
     size: string,
 }
 
