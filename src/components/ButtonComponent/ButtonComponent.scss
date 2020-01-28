@@ -1,0 +1,28 @@
+.sign {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 1rem 0.5rem 0.2rem 0.7rem;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 17px;
+  min-width: 10rem;
+  min-height: 2rem;
+}
+.sign.in {
+  background: #64bd79;
+  //   border-radius: 2px;
+}
+.sign.up {
+  background: #cfd4d9;
+  color: #4a5056;
+  //   border-radius: 2px;
+}
+
+.large {
+  display: flex;
+  //   justify-content: center;
+}

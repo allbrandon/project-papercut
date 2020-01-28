@@ -1,0 +1,30 @@
+@import "../../variables";
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 2px;
+  padding: 0.2rem 0.5rem 0.2rem 0.7rem;
+}
+.socials.google {
+  background: #4285f4;
+  //   border-radius: 2px;
+}
+.socials.facebook {
+  background: #4267b2;
+  //   border-radius: 2px;
+}
+.socials.twitter {
+  background: #00aced;
+  //   border-radius: 2px;
+}
+
+.social__wrap {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.5rem;
+  color: #ffffff;
+  line-height: 17px;
+  display: flex;
+  margin: 1vh;
+}
