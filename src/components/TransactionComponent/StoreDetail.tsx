@@ -1,5 +1,5 @@
 import React from "react";
-import "./Transactions.scss";
+import "./StoreDetail.scss";
 
 // Parameter: An object that contains Store_details
 // Restrictions: number should be in format of xx xxxx xxxx OR xxxx xxx xxx
@@ -21,14 +21,14 @@ const StoreDetail = ({
   number,
   abn
 }: StoreDetailsProps) => {
-  // the parameter below are added for testing
-  id = 1;
-  name = "Woolworths Supermarkets";
-  shoppingCentre = "1310 Bathurst City Centre";
-  address = "210 Howick Street";
-  number = "02 6330 8007";
-  abn = "88 000 014 675";
-  // end of testing
+  // // the parameter below are added for testing
+  // id = 1;
+  // name = "Woolworths Supermarkets";
+  // shoppingCentre = "1310 Bathurst City Centre";
+  // address = "210 Howick Street";
+  // number = "02 6330 8007";
+  // abn = "88 000 014 675";
+  // // end of testing
 
   return (
     <div className="store-detail">

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Transactions.scss";
+import "./Heading.scss";
 import Woolworths from "../../assets/woolworths.png";
 import Sparrows from "../../assets/sparrows.png";
 import error from "../../assets/error.png";
@@ -19,9 +19,9 @@ const Heading = ({
   transactionTime
 }: HeadingDetails) => {
   // the parameter below are added for testing
-  id = 1;
-  name = "Woolworths Supermarkets";
-  transactionTime = "11/02/19 1:05PM";
+  // id = 1;
+  // name = "Woolworths Supermarkets";
+  // transactionTime = "11/02/19 1:05PM";
   // end of testing
 
   const backgroundStyle = {

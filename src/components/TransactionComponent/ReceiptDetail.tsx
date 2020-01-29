@@ -1,5 +1,5 @@
 import React from "react";
-import "./Transactions.scss";
+import "./ReceiptDetail.scss";
 
 type ReceiptDetailProps = {
   iconColor?: string;

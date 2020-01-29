@@ -1,22 +1,13 @@
 import React from "react";
 import StoreDetail from "../components/TransactionComponent/StoreDetail";
 import Heading from "../components/TransactionComponent/Heading";
+import { withKnobs, number, text } from "@storybook/addon-knobs";
 import ReceiptDetail from "../components/TransactionComponent/ReceiptDetail";
-import { withKnobs, number, text, color } from "@storybook/addon-knobs";
 
 export default {
   title: "Transaction Component",
   decorators: [withKnobs]
 };
-
-// const woolies_store_info = {
-//   id: 1,
-//   name: "Woolworths Supermarkets",
-//   shoppingCentre: "1310 Bathurst City Centre",
-//   address: "210 Howick Street",
-//   number: "02 6330 8007",
-//   abn: "88 000 014 675"
-// };
 
 export const store_detail = () => (
   <StoreDetail
@@ -29,13 +20,6 @@ export const store_detail = () => (
   />
 );
 
-// const heading_info = {
-//   id: 1,
-//   logo: "woolworths.png",
-//   name: "Woolworths Supermarkets",
-//   transactionTime: "11/02/19 1:05PM"
-// };
-
 export const heading = () => (
   <Heading
     id={number("id", 1)}
@@ -44,6 +28,6 @@ export const heading = () => (
   />
 );
 
-// export const itemList = () => (
-//   <ReceiptDetail category={text("Category", "Grocery", 0)} />
-// );
+export const receipt_detail = () => (
+  <ReceiptDetail shoppingType={text("Shopping Type", "Grocery", 0)} />
+);
