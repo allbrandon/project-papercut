@@ -6,6 +6,34 @@ html {
   font-size: 62.5%;
 }
 
-.background {
-  background: $background-grey;
+.general-receipt-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.items-text {
+  /* 14pt Lato */
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  /* Subheader Grey */
+
+  color: #878e95;
+}
+
+.category-text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  /* Dark Green 3 */
+  color: #4d9a5f;
+
+  text-align: right;
 }

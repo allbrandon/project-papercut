@@ -3,7 +3,7 @@ import ItemComponent, { ItemComponentProps } from "./ItemComponent";
 import "./Item.scss";
 
 // variables that are common to every single item in receipts
-type ItemListComponentProps = {
+export type ItemListComponentProps = {
   items: Array<ItemComponentProps>;
 };
 
