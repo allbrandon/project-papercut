@@ -50,7 +50,7 @@ const ItemComponent = ({
     circleFontSize = "1rem";
   } else {
     quantityString = quantity.toString();
-    circleFontSize = "1.4rem";
+    circleFontSize = "1.3rem";
   }
   const circleStyle = {
     background: circleColor,
@@ -68,8 +68,8 @@ const ItemComponent = ({
       </div>
 
       <div className="discount-info">
-        <span className="discount">{discount}</span>
-        <span className="discount-amount">{discountString}</span>
+        <span>{discount}</span>
+        <span>{discountString}</span>
       </div>
 
       <div className="description-info">{description}</div>
