@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+/* for all */
+html {
+  font-size: 62.5%;
+}
+
+.background {
+  background: $background-grey;
+}

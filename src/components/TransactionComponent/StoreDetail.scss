@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+.background {
+  background: $background-grey;
+}
+
+/* for StoreDetail.tsx */
+.store-detail {
+  /* 14pt Lato */
+  font-family: Lato;
+  font-style: normal;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+  text-align: center;
+
+  /* Dark Gray 1 */
+  color: $header-grey;
+}
+
+.store-detail-name {
+  font-weight: bold;
+}
