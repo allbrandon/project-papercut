@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+.center-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  width: 375px;
+  height: 0px;
+
+  /* Light Gray 2 */
+
+  border: 1px solid $background-grey;
+}
+
+.detail-tab {
+  /* Background Grey */
+  margin-top: -10px;
+
+  background: white;
+  border-radius: 16px;
+}

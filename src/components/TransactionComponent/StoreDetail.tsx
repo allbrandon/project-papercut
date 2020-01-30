@@ -29,9 +29,14 @@ const StoreDetail = ({
   // number = "02 6330 8007";
   // abn = "88 000 014 675";
   // // end of testing
+  const Gap = {
+    height: "2.4rem"
+  };
 
   return (
     <div className="store-detail">
+      <div className="store-detail-title">Store Details</div>
+      <div style={Gap} />
       <div className="store-detail-name">{name}</div>
       <div>{shoppingCentre}</div>
       <div>{address}</div>

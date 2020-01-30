@@ -8,7 +8,7 @@ html {
 }
 
 .general-item-info {
-  max-width: 311px;
+  max-width: 308px;
   font-weight: bold;
   font-size: $font-size-xxxs;
   line-height: $spacing-xs;
@@ -16,7 +16,7 @@ html {
   justify-content: flex-start;
 
   .name {
-    width: 255px;
+    width: 300px;
     padding-left: $spacing-xs;
     font-weight: 500;
     font-size: $font-size-xxs;
@@ -44,7 +44,7 @@ html {
 }
 
 .discount-info {
-  max-width: 262px;
+  max-width: 308px;
   padding-left: $spacing-xl;
   font-weight: normal;
   font-size: $font-size-xxxs;
@@ -56,7 +56,7 @@ html {
 }
 
 .description-info {
-  max-width: 311px;
+  max-width: 308px;
   padding-left: $spacing-xl;
   font-weight: normal;
   font-size: $font-size-xxxxs;

@@ -17,3 +17,17 @@
 .store-detail-name {
   font-weight: bold;
 }
+
+.store-detail-title {
+  /* 14pt Lato */
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+
+  text-align: left;
+  margin-left: $spacing-s;
+
+  color: $subheader-grey;
+}

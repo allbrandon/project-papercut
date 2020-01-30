@@ -15,28 +15,38 @@
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: $font-size-xxxs;
+    line-height: $spacing-xs;
 
     /* Subheader Grey */
 
-    color: #878e95;
+    color: $subheader-grey;
   }
 
   .category-text {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: $font-size-xxxxs;
+    line-height: $spacing-xs;
 
     /* Dark Green 3 */
-    color: #4d9a5f;
+    color: $dark-accent-green;
 
     text-align: right;
   }
 }
 
 .dollar-sign {
-  left: 342px;
+  margin-left: 299px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+  /* identical to box height */
+
+  /* Gray 2 */
+
+  color: $subheader-grey;
 }

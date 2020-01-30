@@ -4,7 +4,7 @@ import ItemListComponent, {
   ItemListComponentProps
 } from "../ReceiptComponent/ItemListComponent";
 
-type ReceiptDetailProps = {
+export type ReceiptDetailProps = {
   iconColor?: string;
   shoppingType: string;
   shoppingDetail: ItemListComponentProps;
@@ -29,6 +29,13 @@ const ReceiptDetail = ({
     iconName = "icon ion-md-bug";
   }
 
+  const LargeGap = {
+    height: "2.3rem"
+  };
+  const SmallGap = {
+    height: "0.8rem"
+  };
+
   return (
     <div>
       <div className="general-receipt-info">
@@ -36,7 +43,9 @@ const ReceiptDetail = ({
         <i className={iconName} style={iconStyle}></i>
         <span className="category-text">{shoppingType}</span>
       </div>
-      <div>$</div>
+      <div style={LargeGap} />
+      <div className="dollar-sign">$</div>
+      <div style={SmallGap} />
       <div>
         <ItemListComponent items={shoppingDetail} />
       </div>

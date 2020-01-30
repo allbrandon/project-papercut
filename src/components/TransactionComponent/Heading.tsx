@@ -4,10 +4,9 @@ import Woolworths from "../../assets/woolworths.png";
 import Sparrows from "../../assets/sparrows.png";
 import error from "../../assets/error.png";
 
-export type HeadingDetails = {
+export type HeadingDetailsProps = {
   id: number;
   backgroundColor?: string;
-  logo: string;
   name: string;
   transactionTime: string;
 };
@@ -17,7 +16,7 @@ const Heading = ({
   backgroundColor = "#64BD79",
   name,
   transactionTime
-}: HeadingDetails) => {
+}: HeadingDetailsProps) => {
   // the parameter below are added for testing
   // id = 1;
   // name = "Woolworths Supermarkets";
