@@ -8,9 +8,15 @@ export type InputComponentProps = {
 };
 
 export const InputComponent = ({ fieldType, size }: InputComponentProps) => {
+  const inputType = fieldType.toLowerCase();
   return (
     <div className="field">
-      <TextField id={fieldType} label={fieldType} variant="outlined" />
+      <TextField
+        id={fieldType}
+        label={fieldType}
+        type={inputType}
+        variant="outlined"
+      />
     </div>
   );
 };
