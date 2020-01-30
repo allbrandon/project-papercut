@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import "../../variables.scss";
 
-/* for all */
-html {
-  font-size: 62.5%;
-}
-
 .general-receipt-info {
   max-width: 308px;
   font-weight: bold;
@@ -40,4 +35,8 @@ html {
 
     text-align: right;
   }
+}
+
+.dollar-sign {
+  left: 342px;
 }
