@@ -4,14 +4,41 @@ import './App.css';
 import { firestore } from './firebase';
 import { auth } from 'firebase';
 
+function addReceipt() {
+  // Add a new receipt to the database.
+  // addReceipt("130000000000071480", true, "XXXXXXXXXXXX9538",
+  // false, "Secret Sneaker Store", "TRXL900000")
+  firestore.collection('receiptTest').add({
+    barcode: "036000291463",
+    timestamp: "11/01/19 8:00PM",
+    eftposData: null,
+    cardNo: null,
+    store: "Sanctuary Hotel",
+    items: 
+      [{name: "Long Island",
+      quantity: 53,
+      price: 10.00}],
+    total: 530,
+    cash: 550,
+    storeDetails: {
+      address: "545 Kent St, Sydney",
+      phone: "02 9264 7117",
+      ABN: "91 618 156 548"}
+    // timestamp: firestore.FieldValue.serverTimestamp()
+  }).catch(function(error) {
+    console.error('Error writing new message to database', error);
+  });
 
-
-
-
+  // db.collection('').doc(this.username).collection('booksList').add({
+  //   password: this.password,
+  //   name: this.name,
+  //   rollno: this.rollno
+  // })
+}
 
 function App() {
   const [receipts, setReceipts] = useState([])
-  const [user, setUser] = useState([])
+  // const [user, setUser] = useState([])
   // Fetches the database in real time
   useEffect(() => {
     async function fetchData() {
@@ -19,11 +46,11 @@ function App() {
       const receiptLoad = snapshot.docs.map(doc => { return { id: doc.id, ...doc.data()}})
     
       setReceipts(receiptLoad)
-      console.log(receipts)
-      auth.onAuthStateChanged(user => {
-        setUser({user});
-      });
-      console.log(user);
+      // console.log(receipts)
+      // auth.onAuthStateChanged(user => {
+      //   setUser({user});
+      // });
+      // console.log(user);
     }
     fetchData();
   }, [receipts]);
@@ -53,6 +80,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <button onClick={addReceipt}>
+        Add Receipt
+      </button>
     </div>
   );
 }
