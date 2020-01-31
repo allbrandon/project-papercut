@@ -48,7 +48,7 @@ const PriceDetail = ({ subtotal, total, cash, card }: PriceDetailProps) => {
         </div>
       </div>
     );
-  } else {
+  } else if (card) {
     // card payment
     return (
       <div>
