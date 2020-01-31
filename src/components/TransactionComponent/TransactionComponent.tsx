@@ -21,6 +21,78 @@ const TransactionComponent = ({
   const Gap = {
     height: "3.2rem"
   };
+  const item_one = {
+    quantity: 8,
+    item: "Cashew Nuts",
+    price: 10.0,
+    discount: "1/2 Special Discount",
+    discountAmount: -5.0,
+    description: "0.962 kg @ $3.90/kg"
+  };
+
+  const item_two = {
+    quantity: 2,
+    item: "Bok Choy",
+    price: 2.0
+  };
+
+  const item_three = {
+    quantity: 1,
+    item: "Nectarine White Flesh",
+    price: 3.75,
+    description: "0.962 kg @ $3.90/kg"
+  };
+
+  const item_four = {
+    quantity: 1,
+    item: "Maple Syrup",
+    price: 3.5,
+    discount: "Introductory Offer Discount",
+    discountAmount: -1.0
+  };
+
+  // the list of receipt items
+  const item_array = [item_one, item_two, item_three, item_four];
+
+  const card_object = {
+    merchant_id: 611000504002691,
+    term_id: "W2691001",
+    card_id: "7370 T",
+    card_type: "MasterCard",
+    card_account: "CREDIT",
+    aid: "A0000000041010",
+    arqc: "F2FA411F78C085ED",
+    tur: "0000000000",
+    total: 81.3,
+    time: "02/01/19 18:45"
+  };
+
+  heading = {
+    id: 1,
+    name: "Woolworths Supermarkets",
+    transactionTime: "11/02/19 1:05PM"
+  };
+
+  items = {
+    shoppingType: "grocery",
+    shoppingDetail: item_array
+  };
+
+  price = {
+    subtotal: 109.59,
+    total: 109.59,
+    card: card_object
+  };
+
+  store = {
+    id: 1,
+    name: "Woolworths Supermarkets",
+    shoppingCentre: "1310 Bathurst City Centre",
+    address: "210 Howick Street",
+    number: "02 6330 8007",
+    abn: "88 000 014 675"
+  };
+
   return (
     <div>
       <Heading

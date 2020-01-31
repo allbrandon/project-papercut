@@ -41,7 +41,6 @@ const Heading = ({
         </button>
       </div>
       <div className="heading-logo-circle">
-        <p>logo</p>
         <IconComponent type="woolworthssupermarkets" size="" />
       </div>
       <div style={smallGap}></div>

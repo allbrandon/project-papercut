@@ -1,13 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import ItemComponent from "./components/ReceiptComponent/ItemComponent";
-// import ItemListComponent from "./components/ReceiptComponent/ItemListComponent";
+import TransactionComponent from "./components/TransactionComponent/TransactionComponent";
 
 function App() {
   return (
     <Router>
-      <Route exactpath="/" component={ItemComponent} />
+      <Route exactpath="/" component={TransactionComponent} />
       {/* <Route exactpath="/" component={ItemListComponent} /> */}
     </Router>
   );
