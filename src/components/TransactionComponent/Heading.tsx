@@ -1,8 +1,6 @@
 import React from "react";
 import "./Heading.scss";
-import Woolworths from "../../assets/woolworths.png";
-import Sparrows from "../../assets/sparrows.png";
-import error from "../../assets/error.png";
+import IconComponent from "../IconComponent";
 
 export type HeadingDetailsProps = {
   id: number;
@@ -35,15 +33,6 @@ const Heading = ({
     height: "3.2rem"
   };
 
-  var logo_image;
-  if (id === 1) {
-    logo_image = Woolworths;
-  } else if (id === 2) {
-    logo_image = Sparrows;
-  } else {
-    logo_image = error;
-  }
-
   return (
     <div style={backgroundStyle}>
       <div className="back-button-padding">
@@ -52,7 +41,8 @@ const Heading = ({
         </button>
       </div>
       <div className="heading-logo-circle">
-        <img src={logo_image} alt="Company Logo" />
+        <p>logo</p>
+        <IconComponent type="woolworthssupermarkets" size="" />
       </div>
       <div style={smallGap}></div>
       <div className="heading-store-name">{name}</div>

@@ -66,7 +66,7 @@ const item_array = [item_one, item_two, item_three, item_four];
 
 export const receipt_detail = () => (
   <ReceiptDetail
-    shoppingType={text("Shopping Type", "Grocery", 0)}
+    shoppingType={text("Shopping Type", "grocery", 0)}
     shoppingDetail={array("Shopping Info", item_array)}
   />
 );
@@ -122,7 +122,7 @@ const heading_object = {
 };
 
 const item_object = {
-  shoppingType: "Grocery",
+  shoppingType: "grocery",
   shoppingDetail: item_array
 };
 

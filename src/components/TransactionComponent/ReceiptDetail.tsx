@@ -3,6 +3,7 @@ import "./ReceiptDetail.scss";
 import ItemListComponent, {
   ItemListComponentProps
 } from "../ReceiptComponent/ItemListComponent";
+import IconComponent from "../IconComponent";
 
 export type ReceiptDetailProps = {
   iconColor?: string;
@@ -15,20 +16,6 @@ const ReceiptDetail = ({
   shoppingType,
   shoppingDetail
 }: ReceiptDetailProps) => {
-  const iconStyle = {
-    color: iconColor
-  };
-
-  var iconName;
-
-  if (shoppingType === "Grocery") {
-    iconName = "icon ion-md-basket";
-  } else if (shoppingType === "Food") {
-    iconName = "icon ion-md-restaurant";
-  } else {
-    iconName = "icon ion-md-bug";
-  }
-
   const LargeGap = {
     height: "2.3rem"
   };
@@ -40,7 +27,9 @@ const ReceiptDetail = ({
     <div>
       <div className="general-receipt-info">
         <span className="items-text">Items</span>
-        <i className={iconName} style={iconStyle}></i>
+        <span className="category-image">
+          <IconComponent type={shoppingType} size="" />
+        </span>
         <span className="category-text">{shoppingType}</span>
       </div>
       <div style={LargeGap} />
