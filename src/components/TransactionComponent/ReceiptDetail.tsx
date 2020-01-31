@@ -1,14 +1,13 @@
 import React from "react";
 import "./ReceiptDetail.scss";
-import ItemListComponent, {
-  ItemListComponentProps
-} from "../ReceiptComponent/ItemListComponent";
+import ItemListComponent from "../ReceiptComponent/ItemListComponent";
 import IconComponent from "../IconComponent";
+import { ItemComponentProps } from "../ReceiptComponent/ItemComponent";
 
 export type ReceiptDetailProps = {
   iconColor?: string;
   shoppingType: string;
-  shoppingDetail: ItemListComponentProps;
+  shoppingDetail: Array<ItemComponentProps>;
 };
 
 const ReceiptDetail = ({
@@ -28,7 +27,7 @@ const ReceiptDetail = ({
       <div className="general-receipt-info">
         <span className="items-text">Items</span>
         <span className="category-image">
-          <IconComponent type={shoppingType} size="small" />
+          <IconComponent type="grocery" size="small" />
         </span>
         <span className="category-text">{shoppingType}</span>
       </div>

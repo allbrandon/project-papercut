@@ -77,6 +77,8 @@ const PriceDetail = ({ subtotal, total, cash, card }: PriceDetailProps) => {
         />
       </div>
     );
+  } else {
+    return <p>error</p>;
   }
 };
 
