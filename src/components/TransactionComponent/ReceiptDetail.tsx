@@ -28,7 +28,7 @@ const ReceiptDetail = ({
       <div className="general-receipt-info">
         <span className="items-text">Items</span>
         <span className="category-image">
-          <IconComponent type={shoppingType} size="" />
+          <IconComponent type={shoppingType} size="small" />
         </span>
         <span className="category-text">{shoppingType}</span>
       </div>
