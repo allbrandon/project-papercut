@@ -21,6 +21,9 @@ const ReceiptDetail = ({
   const SmallGap = {
     height: "0.8rem"
   };
+  const SmallSpanGap = {
+    width: "0.9rem"
+  };
 
   return (
     <div>
@@ -29,6 +32,7 @@ const ReceiptDetail = ({
         <span className="category-image">
           <IconComponent type={shoppingType} size="small" />
         </span>
+        <span style={SmallSpanGap} />
         <span className="category-text">{shoppingType}</span>
       </div>
       <div style={LargeGap} />

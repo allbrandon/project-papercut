@@ -23,6 +23,10 @@
     color: $subheader-grey;
   }
 
+  .category-image {
+    width: 16px;
+  }
+
   .category-text {
     font-family: Lato;
     font-style: normal;
@@ -49,9 +53,4 @@
   /* Gray 2 */
 
   color: $subheader-grey;
-}
-
-.category-image {
-  position: block;
-  width: 23px;
 }
