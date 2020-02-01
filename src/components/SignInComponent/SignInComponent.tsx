@@ -20,6 +20,10 @@ export const SignInComponent = ({}: any) => {
       <SocialsButtonComponent socialType="Google" size="" />
       <SocialsButtonComponent socialType="Facebook" size="" />
       <SocialsButtonComponent socialType="Twitter" size="" />
+      {/* <SocialsButtonComponent /> */}
+      <h3 className="or">
+        Not with Papercut yet? <a href="signup">Sign Up!</a>
+      </h3>
     </div>
   );
 };

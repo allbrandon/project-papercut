@@ -14,6 +14,7 @@ export const WelcomeComponent = ({}: any) => {
       <ButtonComponent buttonType="Sign In" size="large" />
       <ButtonComponent buttonType="Sign Up" size="large" />
       <h3 className="or">OR</h3>
+      {/* <SocialsButtonComponent /> */}
       <SocialsButtonComponent socialType="Google" size="" />
       <SocialsButtonComponent socialType="Facebook" size="" />
       <SocialsButtonComponent socialType="Twitter" size="" />

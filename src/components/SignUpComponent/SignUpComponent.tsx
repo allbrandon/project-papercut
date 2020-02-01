@@ -20,6 +20,10 @@ export const SignUpComponent = ({}: any) => {
       <SocialsButtonComponent socialType="Google" size="" />
       <SocialsButtonComponent socialType="Facebook" size="" />
       <SocialsButtonComponent socialType="Twitter" size="" />
+      {/* <SocialsButtonComponent /> */}
+      <h3 className="or">
+        Already have an account? <a href="/signin">Sign in!</a>
+      </h3>
     </div>
   );
 };
