@@ -40,15 +40,21 @@ const ReceiptCardComponent = ({
             Math.min(itemString.length, itemString.lastIndexOf(" "))) + " . . .";
         }
         return (
-        <Link to={"/" + id}>
+        <Link to={"/" + id}> 
             <div className="card__container">
-                {/* <div><img className="icon" src={require(`${cateIcon}`)} alt=""></img></div> */}
-                <IconComponent type={category} size={"small"} />
-                <div className="store"><small>{store}</small></div>
-                <div className="total"><small>${total}</small></div>
-                <div> </div>
-                <div className="items"><small>{itemString}</small></div>
-                <div className="date"><small>{date}</small></div>
+                <div className="receipt__card__icon">
+                    <IconComponent type={category} size={"small"} />
+                </div>
+                <div className="receipt__card__detail">
+                    <div className="receipt__card__col">
+                        <div className="store">{store}</div>
+                        <div className="items">{itemString}</div>
+                    </div>
+                    <div className="receipt__card__col">
+                        <div className="total">${total}</div>
+                        <div className="date">{date}</div>
+                    </div>
+                </div>
             </div>
         </Link>
 
