@@ -74,7 +74,7 @@ const TransactionComponent = ({
   };
 
   items = {
-    shoppingType: "food",
+    shoppingType: "grocery",
     shoppingDetail: item_array
   };
 
