@@ -44,7 +44,7 @@ const ReceiptCardComponent = ({
             <div className="card__container">
                 {/* <div><img className="icon" src={require(`${cateIcon}`)} alt=""></img></div> */}
                 <IconComponent type={category} size={"small"} />
-                <div className="store"><small>{store}</small></div>
+                <div className="store">{store}</div>
                 <div className="total"><small>${total}</small></div>
                 <div> </div>
                 <div className="items"><small>{itemString}</small></div>
