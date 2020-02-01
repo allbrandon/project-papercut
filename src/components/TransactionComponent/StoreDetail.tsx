@@ -42,6 +42,7 @@ const StoreDetail = ({
       <div>{address}</div>
       <div>TEL {number}</div>
       <div>ABN {abn}</div>
+      <div style={Gap} />
     </div>
   );
 };

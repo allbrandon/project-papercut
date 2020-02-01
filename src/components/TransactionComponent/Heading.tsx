@@ -15,12 +15,6 @@ const Heading = ({
   name,
   transactionTime
 }: HeadingDetailsProps) => {
-  // the parameter below are added for testing
-  // id = 1;
-  // name = "Woolworths Supermarkets";
-  // transactionTime = "11/02/19 1:05PM";
-  // end of testing
-
   const backgroundStyle = {
     background: backgroundColor
   };
@@ -33,6 +27,11 @@ const Heading = ({
     height: "3.2rem"
   };
 
+  let shop_name = name
+    .split(" ")
+    .join("")
+    .toLowerCase();
+
   return (
     <div style={backgroundStyle}>
       <div className="back-button-padding">
@@ -41,7 +40,9 @@ const Heading = ({
         </button>
       </div>
       <div className="heading-logo-circle">
-        <IconComponent type="woolworthssupermarkets" size="" />
+        <div className="icon">
+          <IconComponent type={shop_name} size="" />
+        </div>
       </div>
       <div style={smallGap}></div>
       <div className="heading-store-name">{name}</div>
