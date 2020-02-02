@@ -1,12 +1,6 @@
 @import "../../variables.scss";
 
-html {
-  font-size: 62.5%;
-  font-family: Lato;
-  font-style: normal;
-}
-
-.general-item-info {
+.general__item__info {
   max-width: 308px;
   font-weight: bold;
   font-size: $font-size-xxxs;
@@ -32,7 +26,7 @@ html {
   }
 }
 
-.discount-info {
+.discount__info {
   max-width: 308px;
   padding-left: $spacing-xl;
   font-weight: normal;
@@ -44,7 +38,7 @@ html {
   color: $subheader-grey;
 }
 
-.description-info {
+.description__info {
   max-width: 308px;
   padding-left: $spacing-xl;
   font-weight: normal;

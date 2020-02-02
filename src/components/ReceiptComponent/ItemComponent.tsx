@@ -65,7 +65,7 @@ const ItemComponent = ({
           type={category}
           size=""
           shade={true}
-          quantity={quantityString}
+          text={quantityString}
         />
         <div className="name">{item}</div>
         <div className="price">{price.toFixed(2)}</div>
@@ -73,7 +73,7 @@ const ItemComponent = ({
 
       <div className="discount__info">
         <div>{discountDesc}</div>
-        <span>{"-" + discountString}</span>
+        <span>{discountString}</span>
       </div>
       <div className="description__info">{descString}</div>
     </div>

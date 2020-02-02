@@ -5,16 +5,16 @@ type IconComponentProps = {
   type: string;
   size: string;
   shade: boolean;
-  quantity: string;
+  text: string;
 };
 
-const IconComponent = ({ type, size, shade, quantity }: IconComponentProps) => {
+const IconComponent = ({ type, size, shade, text }: IconComponentProps) => {
   let icon = "assets/icons/" + type + ".svg";
   if (shade === false) {
-    if (quantity !== "") {
+    if (text !== "") {
       return (
         <div>
-          <div className={"shade " + type}>{quantity}</div>
+          <div className={"shade " + type}>{text}</div>
         </div>
       );
     } else {
@@ -25,10 +25,10 @@ const IconComponent = ({ type, size, shade, quantity }: IconComponentProps) => {
       );
     }
   } else {
-    if (quantity !== "") {
+    if (text !== "") {
       return (
         <div>
-          <div className={"shade " + type}>{quantity}</div>
+          <div className={"shade " + type}>{text}</div>
         </div>
       );
     } else {

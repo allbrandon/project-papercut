@@ -25,7 +25,8 @@ const TransactionComponent = ({
     quantity: 8,
     item: "Cashew Nuts",
     price: 10.0,
-    discount: "1/2 Special Discount",
+    category: "grocery",
+    discountDesc: "1/2 Special Discount",
     discountAmount: -5.0,
     description: "0.962 kg @ $3.90/kg"
   };
@@ -33,13 +34,16 @@ const TransactionComponent = ({
   const item_two = {
     quantity: 2,
     item: "Bok Choy",
-    price: 2.0
+    category: "grocery",
+    price: 2.0,
+    description: ""
   };
 
   const item_three = {
     quantity: 1,
     item: "Nectarine White Flesh",
     price: 3.75,
+    category: "grocery",
     description: "0.962 kg @ $3.90/kg"
   };
 
@@ -47,8 +51,10 @@ const TransactionComponent = ({
     quantity: 1,
     item: "Maple Syrup",
     price: 3.5,
-    discount: "Introductory Offer Discount",
-    discountAmount: -1.0
+    category: "grocery",
+    discountDesc: "Introductory Offer Discount",
+    discountAmount: -1.0,
+    description: ""
   };
 
   // the list of receipt items
