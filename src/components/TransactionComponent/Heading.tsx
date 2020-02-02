@@ -41,7 +41,7 @@ const Heading = ({
       </div>
       <div className="heading-logo-circle">
         <div className="icon">
-          <IconComponent type={shop_name} size="" />
+          <IconComponent type={shop_name} size="" shade={false} />
         </div>
       </div>
       <div style={smallGap}></div>
