@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import "../../variables.scss";
 
 html {
@@ -7,7 +6,7 @@ html {
   font-style: normal;
 }
 
-.general-item-info {
+.general__item__info {
   max-width: 311px;
   font-weight: bold;
   font-size: $font-size-xxxs;
@@ -31,19 +30,9 @@ html {
     color: $header-grey;
     text-align: right;
   }
-  .number-circle {
-    border-radius: 50%;
-    /* remove if you don't care about IE8 */
-    width: 11px;
-    height: 10px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
 }
 
-.discount-info {
+.discount__info {
   max-width: 262px;
   padding-left: $spacing-xl;
   font-weight: normal;
@@ -55,7 +44,7 @@ html {
   color: $subheader-grey;
 }
 
-.description-info {
+.description__info {
   max-width: 311px;
   padding-left: $spacing-xl;
   font-weight: normal;
