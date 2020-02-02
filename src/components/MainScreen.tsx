@@ -1,13 +1,23 @@
 import React from 'react'; 
 import ReceiptListComponent from './ReceiptListComponent'
 import './MainScreen.scss'
-import HeaderComponent from './HeaderComponent';
+import HeaderComponent from './HeaderComponent'; 
+import EmptyListComponent from './EmptyListComponent';
 
 
 
 
-const MainScreen = (props:any) => {
-    const items = [{
+const MainScreen = (props:any) => { 
+    const items = [
+    //{
+    //     store: "",
+    //     category: "", 
+    //     items: [], 
+    //     date: "", 
+    //     total: 0,  
+    //     id: 0,
+    // }
+    {
         store: "Woolworths",
         category: "grocery",
         items: ["Bok Choy", "Maple Syrup"], 
@@ -61,12 +71,15 @@ const MainScreen = (props:any) => {
 
     }
     ]
-    const name = "Austin";
+    const name = "Austin"; 
+    const empty = false;
+
     return(
-    <div className="wrapper">
-        <HeaderComponent name={name}/>
+    <div className="wrapper"> 
+        <HeaderComponent name={name} empty={empty}/>
         <div className="list__container">
-            <ReceiptListComponent items={items} />
+            {!empty ? <ReceiptListComponent items={items} /> : <EmptyListComponent /> }
+            
         </div>
 
         

@@ -1,28 +1,42 @@
-@import "../variables";
-.greeting__a {
+@import "../variables"; 
+.header__container {
+    display: flex; 
+    flex-flow: column nowrap;
+}
+
+.greeting { 
+    // display: flex; 
+    // flex-flow: column nowrap;
+    padding-bottom: 1rem; 
+    // margin: px;
+}
+
+.greeting.a {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
-    font-size: $font-size-s;
+    font-size: $font-size-l;
     line-height: 36px;
     color: #F8F9FA;
-    padding-left: $spacing-s;
+    padding-left: $spacing-s;   
+    padding-bottom: 0.01rem;
 }
 
-.greeting__b {
+.greeting.b {
     /* 24pt Lato */
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: $font-size-xxs;
+    font-size: $font-size-m;
     line-height: 29px;
     padding-left: $spacing-s;
-    color: #F8F9FA;
+    color: #F8F9FA; 
+
 }
 
 .nav {
     // padding: 3vh 6vw 6vw;
-    padding: $spacing-s $spacing-xs $spacing-xs;
+    padding: $spacing-s $spacing-s 0rem $spacing-s;
     display: flex; 
     justify-content: space-between;
 }

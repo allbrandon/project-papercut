@@ -6,23 +6,29 @@ import './HeaderComponent.scss';
 import { Link } from 'react-router-dom';
 import IconComponent from './IconComponent';
 
+export type HeaderComponentProps = {
+    name: string,  
+    empty: boolean,
+
+}
 
 
-
-const HeaderComponent = (props:any) => { 
+const HeaderComponent = ({name, empty}:HeaderComponentProps) => { 
     return (
     <div className="header__container">
         <div className="nav">
         {/* <HamburgerMenuComponent /> */}
         {/* <img src={Burger} alt=""></img> */}
-        <IconComponent type="Burger" size="small" />
+        <IconComponent type="Burger" size="small" shade={false} />
         <Link to='/profile'>
             {/* <img src={ProfileIcon} alt=""></img> */}
-            <IconComponent type="Profile"  size="small" />
+            <IconComponent type="settings"  size="small" shade={false} />
         </Link>
+        </div> 
+        <div className="greeting">
+            <h1 className="greeting a">Hi {name}!</h1> 
+            <h2 className="greeting b">{empty ? "Welcome to Papercut Receipts" : "Enjoy your digital receipts"}</h2>
         </div>
-        <h1 className="greeting__a">Hi {props.name}</h1> 
-        <h2 className="greeting__b">Enjoy your digital receipts</h2>
 
     </div>
 

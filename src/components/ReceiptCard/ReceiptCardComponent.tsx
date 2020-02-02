@@ -42,8 +42,10 @@ const ReceiptCardComponent = ({
         return (
         <Link to={"/" + id}> 
             <div className="card__container">
-                <div className="receipt__card__icon">
-                    <IconComponent type={category} size={"small"} />
+                <div className="receipt__card__icon"> 
+                    <div className="icon__shade">
+                        <IconComponent type={category} size={"small"} shade={true} />
+                    </div>
                 </div>
                 <div className="receipt__card__detail">
                     <div className="receipt__card__col">
