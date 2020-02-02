@@ -5,23 +5,39 @@ type IconComponentProps = {
   type: string;
   size: string;
   shade: boolean;
+  quantity: string;
 };
 
-const IconComponent = ({ type, size, shade }: IconComponentProps) => {
+const IconComponent = ({ type, size, shade, quantity }: IconComponentProps) => {
   let icon = "assets/icons/" + type + ".svg";
   if (shade === false) {
-    return (
-      <div>
-        <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
-      </div>
-    );
+    if (quantity !== "") {
+      return (
+        <div>
+          <div className={"shade " + type}>{quantity}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
+        </div>
+      );
+    }
   } else {
-    console.log("test");
-    return (
-      <div className={"shade " + type}>
-        <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
-      </div>
-    );
+    if (quantity !== "") {
+      return (
+        <div>
+          <div className={"shade " + type}>{quantity}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div className={"shade " + type}>
+          <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
+        </div>
+      );
+    }
   }
 };
 
