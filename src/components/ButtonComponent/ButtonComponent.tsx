@@ -7,7 +7,7 @@ export type ButtonComponentProps = {
   size: string;
 };
 
-export const ButtonComponent = ({ buttonType, size }: ButtonComponentProps) => {
+export const ButtonComponent = ({ buttonType, size}: ButtonComponentProps) => {
   const buttonStyle = buttonType.toLowerCase();
   const buttonLink = buttonStyle.replace(/\s/g, "");
   let styleWrap = "";

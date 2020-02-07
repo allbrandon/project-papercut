@@ -1,20 +1,24 @@
 import React from "react";
-import TextField from "@material-ui/core/TextField";
+import Input from "@material-ui/core/TextField";
 import "./InputComponent.scss";
 
 export type InputComponentProps = {
+  value: string;
   fieldType: string;
   size: string;
+  onChange: any;
 };
 
-export const InputComponent = ({ fieldType, size }: InputComponentProps) => {
+export const InputComponent = ({ fieldType, size, value, onChange }: InputComponentProps) => {
   const inputType = fieldType.toLowerCase();
   return (
     <div className="field">
-      <TextField
+      <Input
         id={fieldType}
         label={fieldType}
         type={inputType}
+        value={value}
+        onChange={onChange}
         variant="outlined"
       />
     </div>
