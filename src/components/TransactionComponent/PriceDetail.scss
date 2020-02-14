@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+.general-price-info {
+  margin: 0 auto;
+  max-width: 308px;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+  display: flex;
+  justify-content: flex-start;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+
+  color: $subheader-grey;
+
+  .price-description {
+    width: 300px;
+  }
+}
+
+.total-price-info {
+  margin: 0 auto;
+  max-width: 308px;
+  display: flex;
+  justify-content: flex-start;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+
+  color: $header-grey;
+
+  .total-text {
+    width: 300px;
+    font-size: $font-size-xs;
+    line-height: $spacing-s;
+  }
+
+  .total-number {
+    font-size: $font-size-m;
+    line-height: $spacing-s;
+    position: relative;
+    bottom: 0;
+  }
+
+  .total-decimal {
+    font-size: $font-size-xs;
+    line-height: $spacing-s;
+    position: relative;
+    bottom: 0;
+  }
+}

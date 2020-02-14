@@ -1,32 +1,45 @@
-import React from 'react';
+import React from "react";
 import "./IconComponent.scss";
+import { ICONS } from "./Icons";
 
 type IconComponentProps = {
-    type: string,
-    size: string, 
-    shade: boolean,
-}
+  type: string;
+  size: string;
+  shade: boolean;
+  text: string;
+};
 
-const IconComponent = ({type, size, shade}:IconComponentProps) => {
-    let icon = "assets/icons/" + type + ".svg"; 
-    if (shade === false) {
-        return(
-            <div>
-                <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
-            </div>
-        
-        );
-    } else { 
-        console.log("test")
-        return(
-            <div className={"shade " + type}>
-                <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
-            </div>
-        
-        );
+const IconComponent = ({ type, size, shade, text }: IconComponentProps) => {
+  let icon = "assets/icons/" + type + ".svg";
+  if (shade === false) {
+    if (text !== "") {
+      return (
+        <div>
+          <div className={"shade " + type}>{text}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
+        </div>
+      );
     }
-    
-
-}
+  } else {
+    if (text !== "") {
+      return (
+        <div>
+          <div className={"shade " + type}>{text}</div>
+        </div>
+      );
+    } else {
+      return (
+        <div className={"shade " + type}>
+          <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
+        </div>
+      );
+    }
+  }
+};
 
 export default IconComponent;

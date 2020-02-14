@@ -1,5 +1,6 @@
 import React from "react";
-import "./Item.scss";
+import "./ItemComponent.scss";
+import IconComponent from "../IconComponent";
 
 // returns 1 single item in the receipt
 // takes color "to symbolise cash/card payment", quantity "how many you bought", item "name of the item you purchased", price "the default price of the item",
@@ -7,23 +8,21 @@ import "./Item.scss";
 // discountamount "the amount of money you got off because of the discount, need to be negative" (optional)
 // description "detailed description of item" (optional)
 export type ItemComponentProps = {
-  circleColor?: string;
-  circleTextColor?: string;
   quantity: number;
   item: string;
   price: number;
-  discount?: string;
+  discountDesc?: string;
   discountAmount?: number;
-  description?: string;
+  category: string;
+  description: string;
 };
 const ItemComponent = ({
-  circleColor = "#B7EBC4",
-  circleTextColor = "#4D9A5F",
   quantity,
   item,
   price,
-  discount,
+  discountDesc,
   discountAmount,
+  category,
   description
 }: ItemComponentProps) => {
   // below are some parameter passing for testing
@@ -39,7 +38,6 @@ const ItemComponent = ({
 
   let discountString: string;
   let quantityString: string;
-  let circleFontSize: string;
   if (discountAmount) {
     discountString = (discountAmount as number).toFixed(2);
   } else {
@@ -47,32 +45,37 @@ const ItemComponent = ({
   }
   if (quantity > 99) {
     quantityString = "99+";
-    circleFontSize = "1rem";
   } else {
     quantityString = quantity.toString();
-    circleFontSize = "1.3rem";
   }
-  const circleStyle = {
-    background: circleColor,
-    color: circleTextColor,
-    fontSize: circleFontSize
-  };
+  const maxChar = 21;
+  let descString = description;
+  if (description.length > maxChar) {
+    descString = description.substring(0, maxChar);
+    descString =
+      descString.substring(
+        0,
+        Math.min(descString.length, descString.lastIndexOf(" "))
+      ) + " . . .";
+  }
   return (
     <div>
-      <div className="general-item-info">
-        <span style={circleStyle} className="number-circle">
-          {quantityString}
-        </span>
-        <span className="name">{item}</span>
-        <span className="price">{price.toFixed(2)}</span>
+      <div className="general__item__info">
+        <IconComponent
+          type={category}
+          size=""
+          shade={true}
+          text={quantityString}
+        />
+        <div className="name">{item}</div>
+        <div className="price">{price.toFixed(2)}</div>
       </div>
 
-      <div className="discount-info">
-        <span>{discount}</span>
+      <div className="discount__info">
+        <div>{discountDesc}</div>
         <span>{discountString}</span>
       </div>
-
-      <div className="description-info">{description}</div>
+      <div className="description__info">{descString}</div>
     </div>
   );
 };

@@ -1,89 +1,145 @@
 @import "../variables";
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-weight: inherit;
-	font-style: inherit;
-	// font-size: 100%;
-	font-family: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  // font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
 }
 /* remember to define focus styles! */
 :focus {
-	outline: 0;
+  outline: 0;
 }
 body {
-	line-height: 1;
-	color: black;
-	background: white;
+  line-height: 1;
+  color: black;
+  background: white;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 /* tables still need 'cellspacing="0"' in the markup */
 table {
-	border-collapse: separate;
-	border-spacing: 0;
+  border-collapse: separate;
+  border-spacing: 0;
 }
-caption, th, td {
-	text-align: left;
-	font-weight: normal;
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: "";
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
 }
-blockquote, q {
-	quotes: "" "";
+blockquote,
+q {
+  quotes: "" "";
 }
 .header__container {
-    display: flex; 
-    flex-flow: column nowrap;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-.greeting { 
-    // display: flex; 
-    // flex-flow: column nowrap;
-    // padding-bottom: 1rem; 
-    // margin: px;
+.greeting {
+  // display: flex;
+  // flex-flow: column nowrap;
+  // padding-bottom: 1rem;
+  // margin: px;
 }
 
 .greeting.a {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    font-size: $font-size-l;
-    // line-height: 36px;
-    color: #F8F9FA;
-    padding-left: $spacing-s;   
-    margin-bottom: $spacing-xxs;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $font-size-l;
+  // line-height: 36px;
+  color: #f8f9fa;
+  padding-left: $spacing-s;
+  margin-bottom: $spacing-s;
 }
 
 .greeting.b {
-    /* 24pt Lato */
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: $font-size-m;
-    // line-height: 29px;
-    padding-left: $spacing-s;
-    color: #F8F9FA; 
-    margin-bottom: $spacing-l;
-
+  /* 24pt Lato */
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-m;
+  // line-height: 29px;
+  padding-left: $spacing-s;
+  color: #f8f9fa;
+  margin-bottom: $spacing-l;
 }
 
 .nav {
-    // padding: 3vh 6vw 6vw;
-    padding: $spacing-s $spacing-s 0rem $spacing-s;
-    display: flex; 
-    justify-content: space-between;
+  // padding: 3vh 6vw 6vw;
+  padding: $spacing-s $spacing-s 0rem $spacing-s;
+  margin-bottom: $spacing-s;
+  display: flex;
+  justify-content: space-between;
 }
