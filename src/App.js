@@ -1,13 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import TransactionComponent from "./components/TransactionComponent/TransactionComponent";
-
+import MainScreen from "./components/MainScreen.tsx";
+import { MemoryRouter as Router, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <Route exactpath="/" component={TransactionComponent} />
-      {/* <Route exactpath="/" component={ItemListComponent} /> */}
+      <Route exact path="/" component={MainScreen} />
     </Router>
   );
 }

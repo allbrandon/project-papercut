@@ -1,0 +1,13 @@
+@import "../variables"; 
+.empty__wrapper {
+    display: flex; 
+    flex-flow: column nowrap; 
+    justify-content: space-between;
+    text-align: center; 
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-m;
+    color: #4A5056; 
+    padding: 5rem;
+} 

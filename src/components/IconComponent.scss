@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "../variables";
 .shade {
   border-radius: 50%;
@@ -17,3 +18,19 @@
   background: #e9acab;
   color: $dark-accent-red;
 }
+=======
+.shade {
+    border-radius: 50%;
+    /* remove if you don't care about IE8 */
+    width: 12px;
+    height: 11px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex; 
+    
+} 
+.shade.grocery {
+    background: #E8FBED;
+}
+>>>>>>> feature/PP-94-routing
