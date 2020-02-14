@@ -4,7 +4,7 @@
 .log-out-button {
   display: block;
   margin: auto;
-  background: #878e95;
+  background: $subheader-grey;
   border-radius: 8px;
   width: 150px;
   height: 50px;
@@ -14,13 +14,13 @@
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: $font-size-xxs;
+  line-height: $spacing-x;
   margin-left: 30px;
 
   /* Background Grey */
 
-  color: #f8f9fa;
+  color: $background-grey;
 }
 
 .log-out-1 {
