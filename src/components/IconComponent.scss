@@ -1,3 +1,4 @@
+@import "../variables";
 .shade {
   border-radius: 50%;
   /* remove if you don't care about IE8 */
@@ -9,5 +10,10 @@
   display: flex;
 }
 .shade.grocery {
-  background: #e8fbed;
+  background: #b7ebc4;
+  color: $dark-accent-green;
+}
+.shade.food {
+  background: #e9acab;
+  color: $dark-accent-red;
 }

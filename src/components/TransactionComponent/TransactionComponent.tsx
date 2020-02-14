@@ -76,7 +76,8 @@ const TransactionComponent = ({
   heading = {
     id: 1,
     name: "Woolworths Supermarkets",
-    transactionTime: "11/02/19 1:05PM"
+    transactionTime: "11/02/19 1:05PM",
+    category: "grocery"
   };
 
   items = {
@@ -105,6 +106,7 @@ const TransactionComponent = ({
         id={heading.id}
         name={heading.name}
         transactionTime={heading.transactionTime}
+        category={heading.category}
       />
 
       <div className="detail-tab">

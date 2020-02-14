@@ -4,20 +4,20 @@ import IconComponent from "../IconComponent";
 
 export type HeadingDetailsProps = {
   id: number;
-  backgroundColor?: string;
+  category: string;
   name: string;
   transactionTime: string;
 };
 
 const Heading = ({
   id,
-  backgroundColor = "#64BD79",
+  category,
   name,
   transactionTime
 }: HeadingDetailsProps) => {
-  const backgroundStyle = {
-    background: backgroundColor
-  };
+  // const backgroundStyle = {
+  //   background: backgroundColor
+  // };
 
   const smallGap = {
     height: "0.8rem"
@@ -33,7 +33,7 @@ const Heading = ({
     .toLowerCase();
 
   return (
-    <div style={backgroundStyle}>
+    <div className={"background " + category}>
       <div className="back-button-padding">
         <button className="back-button">
           <i className="arrow-left"></i>

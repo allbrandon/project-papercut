@@ -5,6 +5,13 @@
 html {
   font-size: 62.5%;
 }
+.background.grocery {
+  background: #64bd79;
+}
+.background.food {
+  background: #cc4039;
+}
+
 // for Heading.tsx
 .back-button-padding {
   padding-left: $spacing-s;
