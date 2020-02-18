@@ -10,13 +10,15 @@ const TransactionComponent = ({ match, location }: any) => {
   const Gap = {
     height: "3.2rem"
   };
-  let {
-    params: { id }
+
+  const {
+    params: { trans_id }
   } = match;
-  id = JSON.stringify(id);
-  console.log(id);
-  const detail = receiptGrab(id);
+
+  console.log(trans_id);
+  const detail = receiptList[trans_id - 1];
   console.log(detail);
+
   if (detail != null) {
     return (
       <div>
@@ -62,8 +64,12 @@ const TransactionComponent = ({ match, location }: any) => {
       </div>
     );
   } else {
-    console.log("not workin");
-    return null;
+    return (
+      <div>
+        <p>{trans_id}</p>
+        <p>Not working</p>
+      </div>
+    );
   }
 };
 

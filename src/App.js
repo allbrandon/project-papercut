@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Route exact path="/" component={MainScreen} />
-      <Route exact path="/receipt/:id" component={TransactionComponent} />
+      <Route exact path="/receipt/:trans_id" component={TransactionComponent} />
     </Router>
   );
 }

@@ -88,7 +88,7 @@ const card_object: CardInfo = {
 };
 const receiptDetail: ReceiptInfo = {
   id: 1,
-  store: "Woolworths",
+  store: "Woolworths Supermarkets",
   storeId: 1,
   centre: "1310 Bathurst City Centre",
   category: "grocery",
@@ -105,12 +105,15 @@ const receiptDetail: ReceiptInfo = {
 
 export const receiptList = [receiptDetail];
 
-export const receiptGrab = ({ id }: any) => {
+export const receiptGrab = ({ trans_id }: any) => {
   for (var i = 0; i < receiptList.length; i++) {
-    console.log(receiptList[i]);
-    if (receiptList[i].id == id) {
+    console.log(receiptList[i].id);
+    console.log(trans_id);
+    if (receiptList[i].id === trans_id) {
+      console.log("Returned!");
       return receiptList[i];
     }
   }
+  console.log("Oops");
   return null;
 };
