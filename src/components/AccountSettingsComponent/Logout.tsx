@@ -4,7 +4,7 @@ import IconComponent from "../IconComponent";
 
 const Logout = () => {
   return (
-    <div>
+    <div className="settings">
       <button className="log-out-button">
         <div className="single-line">
           <div className="log-out-1">

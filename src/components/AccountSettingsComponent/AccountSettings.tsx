@@ -26,7 +26,9 @@ const AccountSettings = ({ id, name, email }: AccountHeadingProps) => {
 
       <div style={gap} />
 
-      <Logout />
+      <div className="center-component">
+        <Logout />
+      </div>
 
       <div style={gap} />
     </div>

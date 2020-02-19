@@ -15,7 +15,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: $font-size-xxs;
-  line-height: $spacing-x;
+  line-height: $spacing-s;
   margin-left: 30px;
 
   /* Background Grey */
@@ -25,11 +25,12 @@
 
 .log-out-1 {
   display: flex;
-  margin-left: 22px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .log-out-2 {
   display: flex;
-  margin-top: 4px;
-  margin-left: 32px;
+  margin-top: 14px;
+  margin-left: 20px;
 }

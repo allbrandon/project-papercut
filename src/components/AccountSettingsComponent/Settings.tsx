@@ -17,7 +17,7 @@ const Settings = () => {
   };
 
   return (
-    <div>
+    <div className="settings">
       <div style={small_gap} />
       <div className="single-line">
         <IconComponent type="settings" size="" shade={true} text="" />
@@ -25,19 +25,20 @@ const Settings = () => {
       <div className="single-line-text">ACCOUNT SETTINGS</div>
 
       <div className="general-options">
-        <span className="options">Change email</span>
-        <button>
+        <button className="option-buttons">
+          <span className="options">Change email</span>
           <i className="arrow right"></i>
         </button>
-      </div>
-      <div style={large_gap} />
 
-      <div className="general-options">
-        <span className="options">Change password</span>
-        <button>
+        <div style={large_gap} />
+
+        <button className="option-buttons">
+          <span className="options">Change password</span>
           <i className="arrow right"></i>
         </button>
       </div>
+
+      <div style={large_gap} />
 
       <div style={huge_gap} />
 
@@ -47,22 +48,22 @@ const Settings = () => {
       <div className="single-line-text">SUPPORT</div>
 
       <div className="general-options">
-        <span className="options">Contact us</span>
-        <button>
+        <button className="option-buttons">
+          <span className="options">Contact us</span>
           <i className="arrow right"></i>
         </button>
-      </div>
-      <div style={large_gap} />
-      <div className="general-options">
-        <span className="options">Feedback</span>
-        <button>
+
+        <div style={large_gap} />
+
+        <button className="option-buttons">
+          <span className="options">Feedback</span>
           <i className="arrow right"></i>
         </button>
-      </div>
-      <div style={large_gap} />
-      <div className="general-options">
-        <span className="options">Privacy policy</span>
-        <button>
+
+        <div style={large_gap} />
+
+        <button className="option-buttons">
+          <span className="options">Privacy policy</span>
           <i className="arrow right"></i>
         </button>
       </div>
