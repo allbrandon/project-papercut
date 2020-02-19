@@ -8,7 +8,6 @@ import { Link, withRouter } from "react-router-dom";
 import firebase from "../../firebase";
 
 function SignIn(props : any) {
-  const { classes } = props
 
 	const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -41,7 +40,7 @@ function SignIn(props : any) {
 
   async function login() {
 		try {
-			await firebase.login(email, password)
+      await firebase.login(email, password)
 			props.history.replace('/profile')
 		} catch(error) {
 			alert(error.message)

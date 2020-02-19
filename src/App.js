@@ -9,7 +9,16 @@ import firebase from './firebase';
 
 function App() {
   const [receipts, setReceipts] = useState([])
-  // const [user, setUser] = useState([])
+
+  const [firebaseInitialized, setFirebaseInitialized] = useState(false)
+
+	useEffect(() => {
+		firebase.isInitialized().then(val => {
+			setFirebaseInitialized(val)
+		})
+	})
+
+  const [user, setUser] = useState([])
   // Fetches the database in real time
   useEffect(() => {
     async function fetchData() {
@@ -18,9 +27,9 @@ function App() {
     
       setReceipts(receiptLoad)
       // console.log(receipts)
-      // auth.onAuthStateChanged(user => {
-      //   setUser({user});
-      // });
+      firebase.auth.onAuthStateChanged(user => {
+        setUser({user});
+      });
       // console.log(user);
     }
     fetchData();

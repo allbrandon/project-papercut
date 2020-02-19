@@ -42,7 +42,10 @@ function SignUp(props: any) {
 
   async function signUp() {
 		try {
-			await firebase.register(name, email, password)
+      await firebase.register(name, email, password)
+      if (firebase.auth.currentUser != null) {
+        firebase.auth.currentUser.sendEmailVerification()
+      }
 			props.history.replace('/profile')
 		} catch(error) {
 			alert(error.message)

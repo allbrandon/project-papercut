@@ -40,21 +40,25 @@ class Firebase {
 
 	logout() {
 		return this.auth.signOut()
-  }
+  	}
   
-  async register(name, email, password) {
+  	async register(name, email, password) {
 		await this.auth.createUserWithEmailAndPassword(email, password)
 		return this.auth.currentUser.updateProfile({
 			displayName: name
 		})
+	}	
+
+	isInitialized() {
+		return new Promise(resolve => {
+			this.auth.onAuthStateChanged(resolve)
+		})
 	}
 
-	// async register(name, email, password) {
-	// 	await this.auth.createUserWithEmailAndPassword(email, password)
-	// 	return this.auth.currentUser.updateProfile({
-	// 		displayName: name
-	// 	})
-	// }
+	getCurrentUsername() {
+		return this.auth.currentUser && this.auth.currentUser.displayName
+	}
+
 
 }
 
