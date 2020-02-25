@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+.log-out-button {
+  display: block;
+  margin: auto;
+  background: $subheader-grey;
+  border-radius: 8px;
+  width: 150px;
+  height: 50px;
+}
+
+.log-out-text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $font-size-xxs;
+  line-height: $spacing-s;
+  margin-left: 30px;
+
+  /* Background Grey */
+
+  color: $background-grey;
+}
+
+.log-out-1 {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.log-out-2 {
+  display: flex;
+  margin-top: 14px;
+  margin-left: 20px;
+}
