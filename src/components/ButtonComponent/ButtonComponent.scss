@@ -2,15 +2,14 @@
   display: flex;
   justify-content: center;
   border-radius: 8px;
-  padding: 1rem 0.5rem 0.2rem 0.7rem;
-  font-family: Lato;
-  font-style: normal;
+  padding: 8px 36px;
+  margin-top: 20px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #ffffff;
   line-height: 17px;
-  min-width: 10rem;
   min-height: 2rem;
+  width: 100%;
 }
 .sign.in {
   background: #64bd79;
@@ -24,5 +23,6 @@
 
 .large {
   display: flex;
+  min-width: 120px;
   //   justify-content: center;
 }

@@ -6,13 +6,12 @@ import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import SocialsButtonComponent from "../SocialsButtonComponent/SocialsButtonComponent";
 import { Link } from "@reach/router";
 
-import { fontSize } from "../../theme";
+import { fontSize, colors, spacing } from "../../theme";
 import { css, jsx } from "@emotion/react";
 const Or = css`
-  font-size: 0.9rem;
-  line-height: 17px;
-  text-align: center;
+  font-size: ${fontSize.xxxs};
   color: #878e95;
+  margin: 16px;
 `;
 export const SignUpComponent = ({}: any) => {
   return (
@@ -33,18 +32,18 @@ export const SignUpComponent = ({}: any) => {
       <h2
         css={css`
           font-weight: bold;
-          font-size: ${fontSize.xxxxl};
+          font-size: ${fontSize.l};
           line-height: 36px;
-          color: #4a5056;
+          color: ${colors.headergrey};
         `}
       >
         Welcome to Papercut
       </h2>
       <h2
         css={css`
-          font-size: ${fontSize.xxxxl};
+          font-size: ${fontSize.xs};
           line-height: 36px;
-          color: #878e95;
+          color: ${colors.subheadergrey};
           margin: 1vh;
         `}
       >
@@ -54,12 +53,18 @@ export const SignUpComponent = ({}: any) => {
       <InputComponent fieldType="Email" size="" />
       <InputComponent fieldType="Password" size="" />
       <ButtonComponent buttonType="Sign Up" size="large" />
-      <h3 css={Or}>OR</h3>
-      <SocialsButtonComponent socialType="Google" size="" />
+      {/* <h3 css={Or}>OR</h3> */}
+      {/* <SocialsButtonComponent socialType="Google" size="" />
       <SocialsButtonComponent socialType="Facebook" size="" />
-      <SocialsButtonComponent socialType="Twitter" size="" />
+      <SocialsButtonComponent socialType="Twitter" size="" /> */}
       {/* <SocialsButtonComponent /> */}
-      <h3 css={Or}>
+      <h3
+        css={css`
+          font-size: ${fontSize.xxxs};
+          color: #878e95;
+          margin-top: ${spacing.s};
+        `}
+      >
         Already have an account? <a href="/signin">Sign in!</a>
       </h3>
     </div>

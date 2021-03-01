@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from "react";
-import { fontSize } from "../../theme";
+import { fontSize, spacing } from "../../theme";
 import InputComponent from "../InputComponent/InputComponent";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import SocialsButtonComponent from "../SocialsButtonComponent/SocialsButtonComponent";
@@ -8,10 +8,9 @@ import { Link } from "@reach/router";
 
 import { css, jsx } from "@emotion/react";
 const Or = css`
-  font-size: 0.9rem;
-  line-height: 36px;
+  font-size: ${fontSize.xxxs};
   color: #878e95;
-  margin: 1vh;
+  margin: 16px;
 `;
 export const SignInComponent = ({}: any) => {
   return (
@@ -32,7 +31,7 @@ export const SignInComponent = ({}: any) => {
       <h2
         css={css`
           font-weight: bold;
-          font-size: ${fontSize.xs};
+          font-size: ${fontSize.l};
           line-height: 36px;
           color: #4a5056;
         `}
@@ -41,7 +40,7 @@ export const SignInComponent = ({}: any) => {
       </h2>
       <h2
         css={css`
-          font-size: 0.9rem;
+          font-size: ${fontSize.xs};
           line-height: 36px;
           color: #878e95;
           margin: 1vh;
@@ -52,13 +51,19 @@ export const SignInComponent = ({}: any) => {
       <InputComponent fieldType="Email" size="" />
       <InputComponent fieldType="Password" size="" />
       <ButtonComponent buttonType="Sign In" size="large" />
-      <h3 css={Or}>OR</h3>
-      <SocialsButtonComponent socialType="Google" size="" />
+      {/* <h3 css={Or}>OR</h3> */}
+      {/* <SocialsButtonComponent socialType="Google" size="" />
       <SocialsButtonComponent socialType="Facebook" size="" />
-      <SocialsButtonComponent socialType="Twitter" size="" />
+      <SocialsButtonComponent socialType="Twitter" size="" /> */}
       {/* <SocialsButtonComponent /> */}
-      <h3 css={Or}>
-        Not with Papercut yet? <a href="signup">Sign Up!</a>
+      <h3
+        css={css`
+          font-size: ${fontSize.xxxs};
+          color: #878e95;
+          margin-top: ${spacing.s};
+        `}
+      >
+        Not with Papercut yet? <Link to="/signup">Sign Up!</Link>
       </h3>
     </div>
   );

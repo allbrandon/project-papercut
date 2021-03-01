@@ -5,9 +5,9 @@ export const colors = {
   lightaccentgreen2: "hsl(135, 57, 82)",
   maingreen: "hsl(134, 40, 57)",
   // NEUTRALS
-  subheadergrey: "hsl(210, 6, 56)",
-  backgroundgrey: "hsl(210, 17, 98)",
-  headergrey: "hsl(210, 7, 31)",
+  subheadergrey: "hsl(210, 6%, 56%)",
+  backgroundgrey: "hsl(210, 17%%, 98%)",
+  headergrey: "hsl(210, 7%, 31%)",
 
   // ACCENTS
   darkaccentred: "hsl(3, 61, 41)",
