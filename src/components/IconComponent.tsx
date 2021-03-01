@@ -6,7 +6,7 @@ type IconComponentProps = {
   type: string;
   size: string;
   shade: boolean;
-  text: string;
+  text?: string;
 };
 
 const IconComponent = ({ type, size, shade, text }: IconComponentProps) => {
