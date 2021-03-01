@@ -103,7 +103,7 @@ const receiptDetail: ReceiptInfo = {
   items: itemsList
 };
 
-export const receiptList = [receiptDetail];
+export const receiptList = [receiptDetail, receiptDetail, receiptDetail];
 
 export const receiptGrab = ({ trans_id }: any) => {
   for (var i = 0; i < receiptList.length; i++) {

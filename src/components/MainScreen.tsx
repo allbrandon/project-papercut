@@ -12,13 +12,11 @@ const MainScreen = (props: any) => {
   return (
     <div className="wrapper">
       <HeaderComponent name={name} empty={empty} />
-      <div className="list__container">
-        {!empty ? (
-          <ReceiptListComponent receipts={receiptList} />
-        ) : (
-          <EmptyListComponent />
-        )}
-      </div>
+      {!empty ? (
+        <ReceiptListComponent receipts={receiptList} />
+      ) : (
+        <EmptyListComponent />
+      )}
     </div>
   );
 };
