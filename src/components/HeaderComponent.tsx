@@ -18,7 +18,7 @@ const HeaderComponent = ({ name, empty }: HeaderComponentProps) => {
         {/* <HamburgerMenuComponent /> */}
         {/* <img src={Burger} alt=""></img> */}
         <IconComponent type="Burger" size="small" shade={false} text="" />
-        <Link to="/profile">
+        <Link to="/settings">
           {/* <img src={ProfileIcon} alt=""></img> */}
           <IconComponent type="settings" size="small" shade={false} text="" />
         </Link>

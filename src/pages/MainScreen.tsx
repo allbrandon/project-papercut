@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import ReceiptListComponent from "./ReceiptListComponent";
+import ReceiptListComponent from "../components/ReceiptListComponent";
 import "./MainScreen.scss";
-import HeaderComponent from "./HeaderComponent";
-import EmptyListComponent from "./EmptyListComponent";
-import { receiptList } from "./ReceiptPull";
+import HeaderComponent from "../components/HeaderComponent";
+import EmptyListComponent from "../components/EmptyListComponent";
+import { receiptList } from "../components/ReceiptPull";
 import UserContext from "../context/UserContext";
 
 const MainScreen = (props: any) => {
