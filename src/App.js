@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import MainScreen from "./components/MainScreen.tsx";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import UserContext from "./context/UserContext";
+import { Router } from "@reach/router";
 import TransactionComponent from "./components/TransactionComponent/TransactionComponent";
 import SignUpComponent from "./components/SignUpComponent/SignUpComponent";
 import SignInComponent from "./components/SignInComponent/SignInComponent";
 import WelcomeComponent from "./components/WelcomeComponent/WelcomeComponent";
 function App() {
+  const user = useState({ name: "Austin", email: "a@gmail.com" });
   return (
-    <Router>
-      <Route exact path="/" component={MainScreen} />
-      <Route exact path="/receipt/:trans_id" component={TransactionComponent} />
-      <Route exact path="/signup" component={SignUpComponent} />
-      <Route path="/signin" component={SignInComponent} />
-      <Route path="/welcome" component={WelcomeComponent} />
-    </Router>
+    <UserContext.Provider value={user}>
+      <div>
+        <Router>
+          <MainScreen path="/" />
+          <TransactionComponent path="/receipt/:trans_id" />
+          <SignUpComponent path="/signup" />
+          <SignInComponent path="/signin" />
+          <WelcomeComponent path="/welcome" />
+        </Router>
+      </div>
+    </UserContext.Provider>
   );
 }
 

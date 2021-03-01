@@ -1,6 +1,7 @@
 import React from "react";
 import "./SocialsButtonComponent.scss";
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
+
 import {
   FacebookLoginButton,
   GoogleLoginButton,

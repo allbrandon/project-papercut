@@ -35,7 +35,7 @@ const Heading = ({
   return (
     <div className={"background " + category}>
       <div className="back-button-padding">
-        <button className="back-button">
+        <button className="back-button" onClick={() => window.history.back()}>
           <i className="arrow-left"></i>
         </button>
       </div>

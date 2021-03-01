@@ -3,7 +3,7 @@ import "./HeaderComponent.scss";
 // import HamburgerMenuComponent from './HamburgerMenuComponent';
 // import ProfileIcon from './Profile.svg'
 // import Burger from './Burger.svg'
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
 import IconComponent from "./IconComponent";
 
 export type HeaderComponentProps = {

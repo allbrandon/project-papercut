@@ -4,7 +4,8 @@ import React from "react";
 import InputComponent from "../InputComponent/InputComponent";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import SocialsButtonComponent from "../SocialsButtonComponent/SocialsButtonComponent";
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
+
 import { fontSize } from "../../theme";
 import { css, jsx } from "@emotion/react";
 const Or = css`

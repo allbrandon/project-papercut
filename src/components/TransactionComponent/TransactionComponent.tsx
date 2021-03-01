@@ -6,16 +6,16 @@ import PriceDetail, { PriceDetailProps } from "./PriceDetail";
 import StoreDetail, { StoreDetailsProps } from "./StoreDetail";
 import { receiptList, ReceiptInfo, receiptGrab } from "../ReceiptPull";
 
-const TransactionComponent = ({ match, location }: any) => {
+const TransactionComponent = ({ trans_id }: any) => {
   const Gap = {
     height: "3.2rem"
   };
 
-  const {
-    params: { trans_id }
-  } = match;
+  // const {
+  //   params: { trans_id }
+  // } = match;
 
-  console.log(trans_id);
+  // console.log(trans_id);
   const detail = receiptList[trans_id - 1];
   console.log(detail);
 

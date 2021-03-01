@@ -2,7 +2,8 @@ import React from "react";
 import "./WelcomeComponent.scss";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import SocialsButtonComponent from "../SocialsButtonComponent/SocialsButtonComponent";
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
+
 export const WelcomeComponent = ({}: any) => {
   return (
     <div className="wrapper">

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ReceiptCardComponent.scss";
 // import Grocery from '../../grocery.svg'
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
 import IconComponent from "./../IconComponent";
 // import { Icon } from '@material-ui/core';
 import { ReceiptInfo } from "../ReceiptPull";
