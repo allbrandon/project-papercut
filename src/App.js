@@ -17,26 +17,26 @@ function App() {
     firebase.isInitialized().then(val => {
       setFirebaseInitialized(val);
     });
-  });
+  }, []);
 
   const [user, setUser] = useState([]);
   // Fetches the database in real time
-  useEffect(() => {
-    async function fetchData() {
-      const snapshot = await firebase.firestore.collection("receiptTest").get();
-      const receiptLoad = snapshot.docs.map(doc => {
-        return { id: doc.id, ...doc.data() };
-      });
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const snapshot = await firebase.firestore.collection("receiptTest").get();
+  //     const receiptLoad = snapshot.docs.map(doc => {
+  //       return { id: doc.id, ...doc.data() };
+  //     });
 
-      setReceipts(receiptLoad);
-      // console.log(receipts)
-      firebase.auth.onAuthStateChanged(user => {
-        setUser({ user });
-      });
-      // console.log(user);
-    }
-    fetchData();
-  }, [receipts]);
+  //     setReceipts(receiptLoad);
+  //     // console.log(receipts)
+  //     firebase.auth.onAuthStateChanged(user => {
+  //       setUser({ user });
+  //     });
+  //     // console.log(user);
+  //   }
+  //   fetchData();
+  // }, [receipts]);
   // Handles new addition to database
   const handleCreate = async post => {
     firebase.firestore.collection("receiptTest").add(post);
