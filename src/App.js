@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import MainScreen from "./pages/MainScreen.tsx";
+import UserContext from "./context/UserContext";
+import { Router } from "@reach/router";
+import TransactionComponent from "./components/TransactionComponent/TransactionComponent";
 import SignUpComponent from "./components/SignUpComponent/SignUpComponent";
 import SignInComponent from "./components/SignInComponent/SignInComponent";
 import WelcomeComponent from "./components/WelcomeComponent/WelcomeComponent";
-import AccountProfileComponent from "./components/AccountProfileComponent/AccountProfileComponent";
-import firebase from "./firebase";
 import AccountSettings from "./components/AccountSettingsComponent/AccountSettings";
+import SettingsPage from "./pages/SettingsPage";
+
+import firebase from "./firebase";
 
 function App() {
   const [receipts, setReceipts] = useState([]);
@@ -46,14 +50,21 @@ function App() {
     firebase.firestore.doc(`receiptTest/${id}`).delete();
   };
 
+  // const user = useState({ name: "Austin", email: "a@gmail.com" });
   return (
-    <Router>
-      <Route exact path="/signup" component={SignUpComponent} />
-      <Route path="/signin" component={SignInComponent} />
-      <Route path="/welcome" component={WelcomeComponent} />
-      <Route path="/profile" component={AccountProfileComponent} />
-      <Route exact path="/settings" component={AccountSettings} />
-    </Router>
+    <UserContext.Provider value={user}>
+      <div>
+        <Router>
+          <WelcomeComponent path="/" />
+
+          <MainScreen path="/home" />
+          <TransactionComponent path="/receipt/:trans_id" />
+          <SignUpComponent path="/signup" />
+          <SignInComponent path="/signin" />
+          <SettingsPage path="/settings" />
+        </Router>
+      </div>
+    </UserContext.Provider>
   );
 }
 

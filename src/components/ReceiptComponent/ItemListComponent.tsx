@@ -1,7 +1,6 @@
 import React from "react";
 import ItemComponent, { ItemComponentProps } from "./ItemComponent";
-import "./Item.scss";
-
+import "./ItemListComponent.scss";
 // variables that are common to every single item in receipts
 type ItemListComponentProps = {
   items: Array<ItemComponentProps>;
@@ -11,17 +10,18 @@ type ItemListComponentProps = {
 // take in a list/array of items and make it a list
 const ItemListComponent = ({ items }: ItemListComponentProps) => {
   return (
-    <div>
+    <div className="item__list__wrapper">
       {items.map(item => (
         <div>
           <ItemComponent
-            circleTextColor={item.circleTextColor}
-            circleColor={item.circleColor}
+            // circleTextColor={item.circleTextColor}
+            // circleColor={item.circleColor}
             quantity={item.quantity}
             item={item.item}
             price={item.price}
-            discount={item.discount}
+            discountDesc={item.discountDesc}
             discountAmount={item.discountAmount}
+            category={item.category}
             description={item.description}
           />
           <br />

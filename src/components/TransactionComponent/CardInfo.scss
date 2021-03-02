@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+.dotted-divider {
+  /* Dotted Divider */
+  max-width: 308px;
+  margin: 0 auto;
+  width: 201px;
+  height: 0px;
+
+  opacity: 0.52;
+  /* Gray 2 */
+
+  border: 1px dashed $subheader-grey;
+}
+
+.info-line {
+  max-width: 201px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+  white-space: nowrap;
+
+  /* Subheader Grey */
+
+  color: $subheader-grey;
+
+  .head {
+    width: 200px;
+  }
+}

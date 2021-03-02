@@ -1,10 +1,9 @@
-@import "../variables.scss";
-
+@import "../variables";
 .shade {
   border-radius: 50%;
   /* remove if you don't care about IE8 */
-  width: 12px;
-  height: 11px;
+  width: 30px;
+  height: 30px;
   padding: 10px;
   align-items: center;
   justify-content: center;
@@ -22,4 +21,10 @@
   width: 4px;
   height: 4px;
   background: #8dd6a4;
+  background: #b7ebc4;
+  color: $dark-accent-green;
+}
+.shade.food {
+  background: #e9acab;
+  color: $dark-accent-red;
 }

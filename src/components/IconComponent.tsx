@@ -1,11 +1,12 @@
 import React from "react";
 import "./IconComponent.scss";
+import { ICONS } from "./Icons";
 
 type IconComponentProps = {
   type: string;
   size: string;
   shade: boolean;
-  text: string;
+  text?: string;
 };
 
 const IconComponent = ({ type, size, shade, text }: IconComponentProps) => {
