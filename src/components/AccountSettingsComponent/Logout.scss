@@ -8,15 +8,16 @@
   border-radius: 8px;
   width: 150px;
   height: 50px;
+  cursor: pointer;
+}
+.log-out-button:hover {
+  background: hsl(3, 61%, 41%);
 }
 
 .log-out-text {
-  font-family: Lato;
-  font-style: normal;
   font-weight: bold;
   font-size: $font-size-xxs;
   line-height: $spacing-s;
-  margin-left: 30px;
 
   /* Background Grey */
 

@@ -1,123 +1,125 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import "../../variables.scss";
 
-.background {
-  background-color: $main-green;
-}
+.account-heading {
+  .background {
+    background-color: $main-green;
+  }
 
-.back-button-padding {
-  padding-left: $spacing-s;
-  padding-top: $spacing-s;
-}
+  .back-button-padding {
+    padding-left: $spacing-s;
+    padding-top: $spacing-s;
+  }
 
-.back-button {
-  width: 28px;
-  height: 28px;
-  border-radius: 2000px;
-  text-align: center;
-  line-height: 28px;
-  background: $light-accent-green-2;
-}
+  .back-button {
+    width: 28px;
+    height: 28px;
+    border-radius: 2000px;
+    text-align: center;
+    line-height: 28px;
+    background: $light-accent-green-2;
+  }
 
-.arrow-left {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(var(--ggs, 1));
-  width: 14px;
-  height: 14px;
-}
+  .arrow-left {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 14px;
+    height: 14px;
+  }
 
-.arrow-left::after,
-.arrow-left::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-}
+  .arrow-left::after,
+  .arrow-left::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+  }
 
-.arrow-left::after {
-  width: 11px;
-  height: 11px;
-  bottom: 1.5px;
-  border-bottom: 2px solid;
-  border-left: 2px solid;
-  transform: rotate(45deg);
-  color: $main-green;
-}
+  .arrow-left::after {
+    width: 11px;
+    height: 11px;
+    bottom: 1.5px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    color: $main-green;
+  }
 
-.arrow-left::before {
-  width: 13px;
-  height: 2px;
-  bottom: 6.5px;
-  background: currentColor;
-  color: $main-green;
-}
+  .arrow-left::before {
+    width: 13px;
+    height: 2px;
+    bottom: 6.5px;
+    background: currentColor;
+    color: $main-green;
+  }
 
-.center-profile {
-  text-align: center;
-}
+  .center-profile {
+    text-align: center;
+  }
 
-.profile-circle {
-  margin-top: -$spacing-xs;
-  height: 86px;
-  width: 86px;
-  background-color: $light-accent-green-2;
-  display: inline-block;
-  border-radius: 50%;
-  text-align: center;
-}
+  .profile-circle {
+    margin-top: -$spacing-xs;
+    height: 86px;
+    width: 86px;
+    background-color: $light-accent-green-2;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+  }
 
-.profile-img {
-  margin: auto;
-  display: inline-block;
-  margin-top: 3px;
-}
+  .profile-img {
+    margin: auto;
+    display: inline-block;
+    margin-top: 3px;
+  }
 
-img {
-  border-radius: 100%;
-}
+  img {
+    border-radius: 100%;
+  }
 
-.plus-button {
-  width: 20px;
-  height: 20px;
-  background: white;
-  border-radius: 50%;
-  margin-left: -20px;
-  top: -5px;
-  color: $main-green;
-  font-size: $font-size-xxxxs;
-  padding: 0px;
-  position: relative;
-}
+  .plus-button {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    margin-left: -20px;
+    top: -5px;
+    color: $main-green;
+    font-size: $font-size-xxxxs;
+    padding: 0px;
+    position: relative;
+  }
 
-.plus {
-  font-style: normal;
-  display: flex;
-  margin-top: -4.5px;
-  margin-left: 4.5px;
-}
+  .plus {
+    font-style: normal;
+    display: flex;
+    margin-top: -4.5px;
+    margin-left: 4.5px;
+  }
 
-.name {
-  text-align: center;
+  .name {
+    text-align: center;
 
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: $font-size-xs;
-  line-height: $spacing-s;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $font-size-xs;
+    line-height: $spacing-s;
 
-  color: $background-grey;
-}
+    color: $background-grey;
+  }
 
-.email {
-  text-align: center;
+  .email {
+    text-align: center;
 
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: $font-size-xxxs;
-  line-height: $spacing-xs;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-xxxs;
+    line-height: $spacing-xs;
 
-  color: $light-accent-green-2;
+    color: $light-accent-green-2;
+  }
 }

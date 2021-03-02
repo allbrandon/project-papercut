@@ -8,7 +8,6 @@ import SignUpComponent from "./components/SignUpComponent/SignUpComponent";
 import SignInComponent from "./components/SignInComponent/SignInComponent";
 import WelcomeComponent from "./components/WelcomeComponent/WelcomeComponent";
 import AccountSettings from "./components/AccountSettingsComponent/AccountSettings";
-import SettingsPage from "./pages/SettingsPage";
 
 import firebase from "./firebase";
 
@@ -61,7 +60,7 @@ function App() {
           <TransactionComponent path="/receipt/:trans_id" />
           <SignUpComponent path="/signup" />
           <SignInComponent path="/signin" />
-          <SettingsPage path="/settings" />
+          <AccountSettings path="/settings" />
         </Router>
       </div>
     </UserContext.Provider>

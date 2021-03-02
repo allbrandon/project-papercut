@@ -2,6 +2,8 @@
 import React from "react";
 import "./Settings.scss";
 import IconComponent from "../IconComponent";
+import { navigate } from "@reach/router";
+import firebase from "../../firebase";
 
 const Settings = () => {
   const small_gap = {
@@ -16,12 +18,15 @@ const Settings = () => {
     height: "4.0rem"
   };
 
+  if (!firebase.getCurrentUsername()) {
+    // not logged in!
+    navigate("/");
+    return null;
+  }
   return (
     <div className="settings">
       <div style={small_gap} />
-      <div className="single-line">
-        <IconComponent type="settings" size="" shade={true} text="" />
-      </div>
+
       <div className="single-line-text">ACCOUNT SETTINGS</div>
 
       <div className="general-options">
@@ -42,9 +47,6 @@ const Settings = () => {
 
       <div style={huge_gap} />
 
-      <div className="single-line">
-        <IconComponent type="help" size="" shade={true} text="" />
-      </div>
       <div className="single-line-text">SUPPORT</div>
 
       <div className="general-options">

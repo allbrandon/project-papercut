@@ -22,9 +22,9 @@ export const ButtonComponent = ({
 
   return (
     <Link to={"/" + buttonLink}>
-      <div className={size} onClick={onClick}>
+      <button className={size} onClick={onClick}>
         <h1 className={buttonStyle}>{buttonType}</h1>
-      </div>
+      </button>
     </Link>
   );
 };

@@ -24,27 +24,29 @@ const AccountHeading = ({ id, name, email }: AccountHeadingProps) => {
   let icon = "../assets/icons/" + profile_photo + ".svg";
 
   return (
-    <div className="background">
-      <div className="back-button-padding">
-        <button className="back-button">
-          <i className="arrow-left"></i>
-        </button>
-      </div>
-      <div className="center-profile">
-        {/* assumes all image are at same size */}
-        <span className="profile-circle">
-          <span className="profile-img">
-            <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
+    <div className="account-heading">
+      <div className="background">
+        <div className="back-button-padding">
+          <button className="back-button" onClick={() => window.history.back()}>
+            <i className="arrow-left"></i>
+          </button>
+        </div>
+        <div className="center-profile">
+          {/* assumes all image are at same size */}
+          <span className="profile-circle">
+            <span className="profile-img">
+              <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
+            </span>
           </span>
-        </span>
-        <button className="plus-button">
-          <i className="plus">+</i>
-        </button>
+          <button className="plus-button">
+            <i className="plus">+</i>
+          </button>
+        </div>
+        <div className="name">{name}</div>
+        <div style={small_gap} />
+        <div className="email">{email}</div>
+        <div style={large_gap} />
       </div>
-      <div className="name">{name}</div>
-      <div style={small_gap} />
-      <div className="email">{email}</div>
-      <div style={large_gap} />
     </div>
   );
 };

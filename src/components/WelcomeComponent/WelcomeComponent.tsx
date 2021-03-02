@@ -4,11 +4,17 @@ import React from "react";
 import "./WelcomeComponent.scss";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import SocialsButtonComponent from "../SocialsButtonComponent/SocialsButtonComponent";
-import { Link } from "@reach/router";
+import { Link, navigate } from "@reach/router";
 import { fontSize, colors } from "../../theme";
+import firebase from "../../firebase";
 import { css, jsx } from "@emotion/react";
 
 export const WelcomeComponent = ({}: any) => {
+  if (firebase.getCurrentUsername()) {
+    // not logged in!
+    navigate("/home");
+    return null;
+  }
   return (
     <div
       css={css`

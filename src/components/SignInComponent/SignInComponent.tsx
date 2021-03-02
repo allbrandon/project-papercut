@@ -16,6 +16,11 @@ const Or = css`
 export const SignInComponent = ({}: any) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  if (firebase.getCurrentUsername()) {
+    // not logged in!
+    navigate("/home");
+    return null;
+  }
   return (
     <div
       css={css`
