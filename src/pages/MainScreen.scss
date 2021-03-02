@@ -1,0 +1,14 @@
+@import "../variables";
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #64BD79;
+    min-height: 100vh;
+
+}
+
+.list__container {
+    width: 100vw;
+    min-height: 80vh;
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../../variables.scss";
+
+.general-receipt-info {
+  max-width: 308px;
+  font-weight: bold;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+  display: flex;
+  justify-content: flex-start;
+
+  .items-text {
+    /* 14pt Lato */
+    width: 300px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-xxxs;
+    line-height: $spacing-xs;
+
+    /* Subheader Grey */
+
+    color: $subheader-grey;
+  }
+
+  .category-image {
+    width: $spacing-xs;
+  }
+
+  .category-text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-xxxxs;
+    line-height: $spacing-xs;
+
+    /* Dark Green 3 */
+    color: $dark-accent-green;
+
+    text-align: right;
+  }
+}
+
+.dollar-sign {
+  margin-left: 299px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+  /* identical to box height */
+
+  /* Gray 2 */
+
+  color: $subheader-grey;
+}

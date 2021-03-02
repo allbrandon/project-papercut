@@ -1,13 +1,18 @@
 import React from "react";
 import "./ButtonComponent.scss";
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
 
 export type ButtonComponentProps = {
   buttonType: string;
   size: string;
+  onClick?: () => Promise<void>;
 };
 
-export const ButtonComponent = ({ buttonType, size}: ButtonComponentProps) => {
+export const ButtonComponent = ({
+  buttonType,
+  size,
+  onClick
+}: ButtonComponentProps) => {
   const buttonStyle = buttonType.toLowerCase();
   const buttonLink = buttonStyle.replace(/\s/g, "");
   let styleWrap = "";
@@ -17,7 +22,7 @@ export const ButtonComponent = ({ buttonType, size}: ButtonComponentProps) => {
 
   return (
     <Link to={"/" + buttonLink}>
-      <div className={size}>
+      <div className={size} onClick={onClick}>
         <h1 className={buttonStyle}>{buttonType}</h1>
       </div>
     </Link>

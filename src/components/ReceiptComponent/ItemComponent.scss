@@ -1,0 +1,48 @@
+@import "../../variables.scss";
+
+.general__item__info {
+  max-width: 308px;
+  font-weight: bold;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+  display: flex;
+  justify-content: flex-start;
+
+  .name {
+    width: 300px;
+    padding-left: $spacing-xs;
+    font-weight: 500;
+    font-size: $font-size-xxs;
+    line-height: $spacing-s;
+    color: $header-grey;
+  }
+
+  .price {
+    font-weight: 500;
+    font-size: $font-size-xxs;
+    line-height: $spacing-s;
+    color: $header-grey;
+    text-align: right;
+  }
+}
+
+.discount__info {
+  max-width: 308px;
+  padding-left: $spacing-xl;
+  font-weight: normal;
+  font-size: $font-size-xxxs;
+  line-height: $spacing-xs;
+
+  display: flex;
+  justify-content: space-between;
+  color: $subheader-grey;
+}
+
+.description__info {
+  max-width: 308px;
+  padding-left: $spacing-xl;
+  font-weight: normal;
+  font-size: $font-size-xxxxs;
+  line-height: $spacing-xs;
+  color: $subheader-grey;
+}
