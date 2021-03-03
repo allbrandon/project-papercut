@@ -13,16 +13,42 @@ import firebase from "./firebase";
 
 function App() {
   const [receipts, setReceipts] = useState([]);
+  const [user, setUser] = useState([]);
 
   const [firebaseInitialized, setFirebaseInitialized] = useState(false);
 
   useEffect(() => {
     firebase.isInitialized().then(val => {
       setFirebaseInitialized(val);
+      setUser([firebase.getUserDetails(), () => {}]);
+      console.log(firebase.getUserDetails());
     });
   }, []);
+  // check auth after every render
+  // useEffect(() => {
+  //   // @ts-ignore
+  //   firebase.auth().onAuthStateChanged(function(user) {
+  //     if (user) {
+  //       // User is signed in.
+  //       setUser(firebase.getUserDetails());
+  //     } else {
+  //       // No user is signed in.
+  //     }
+  //   });
 
-  const [user, setUser] = useState([]);
+  //   // console.log(firebase.getUserDetails());
+  //   // if (firebaseInitialized) {
+  //   //   firebase.auth.onAuthStateChanged(function(user) {
+  //   //     if (user) {
+  //   //       setUser([firebase.auth.currentUser, firebase.auth.email]);
+  //   //       // User is signed in.
+  //   //     } else {
+  //   //       // No user is signed in.
+  //   //     }
+  //   //   });
+  //   // }
+  // }, [user]);
+
   // Fetches the database in real time
   // useEffect(() => {
   //   async function fetchData() {
@@ -41,15 +67,14 @@ function App() {
   //   fetchData();
   // }, [receipts]);
   // Handles new addition to database
-  const handleCreate = async post => {
-    firebase.firestore.collection("receiptTest").add(post);
-  };
+  // const handleCreate = async post => {
+  //   firebase.firestore.collection("receiptTest").add(post);
+  // };
 
-  const handleRemove = async id => {
-    firebase.firestore.doc(`receiptTest/${id}`).delete();
-  };
+  // const handleRemove = async id => {
+  //   firebase.firestore.doc(`receiptTest/${id}`).delete();
+  // };
 
-  // const user = useState({ name: "Austin", email: "a@gmail.com" });
   return (
     <UserContext.Provider value={user}>
       <div>

@@ -53,9 +53,20 @@ class Firebase {
       this.auth.onAuthStateChanged(resolve);
     });
   }
-
+  getUserDetails() {
+    const user = this.auth.currentUser;
+    if (user != null) {
+      return {
+        name: user.displayName,
+        email: user.email
+      };
+    }
+  }
   getCurrentUsername() {
     return this.auth.currentUser && this.auth.currentUser.displayName;
+  }
+  getCurrentEmail() {
+    return this.auth.currentUser && this.auth.currentUser.email;
   }
 }
 

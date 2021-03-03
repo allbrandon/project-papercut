@@ -1,5 +1,7 @@
 // includes back button, profile picture and account details
-import React from "react";
+import React, { useContext } from "react";
+import UserContext from "../../context/UserContext";
+
 import "./AccountHeading.scss";
 
 export type AccountHeadingProps = {
@@ -10,8 +12,6 @@ export type AccountHeadingProps = {
 
 const AccountHeading = ({ id, name, email }: AccountHeadingProps) => {
   id = 1;
-  name = "Austin Vuong";
-  email = "austin.vuong00@gmail.com";
 
   const small_gap = {
     height: "0.8rem"
@@ -23,6 +23,7 @@ const AccountHeading = ({ id, name, email }: AccountHeadingProps) => {
   const profile_photo = "profile_" + id.toString();
   let icon = "../assets/icons/" + profile_photo + ".svg";
 
+  const [user] = useContext(UserContext);
   return (
     <div className="account-heading">
       <div className="background">
@@ -33,18 +34,20 @@ const AccountHeading = ({ id, name, email }: AccountHeadingProps) => {
         </div>
         <div className="center-profile">
           {/* assumes all image are at same size */}
-          <span className="profile-circle">
-            <span className="profile-img">
-              <img src={process.env.PUBLIC_URL + `${icon}`} alt=""></img>
-            </span>
-          </span>
-          <button className="plus-button">
+          <img
+            className="profile-image"
+            src={process.env.PUBLIC_URL + `${icon}`}
+            alt=""
+          ></img>
+          {/* <button className="plus-button">
             <i className="plus">+</i>
-          </button>
+          </button> */}
         </div>
-        <div className="name">{name}</div>
+        <div className="name">{user ? user.name : ""}</div>
         <div style={small_gap} />
-        <div className="email">{email}</div>
+        {/*
+        // @ts-ignore */}
+        <div className="email">{user ? user.email : ""}</div>
         <div style={large_gap} />
       </div>
     </div>

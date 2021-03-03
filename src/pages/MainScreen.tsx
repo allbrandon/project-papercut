@@ -11,7 +11,8 @@ import firebase from "../firebase";
 const MainScreen = (props: any) => {
   const empty = false;
   const [user] = useContext(UserContext);
-  console.log(user);
+
+  // console.log(user);
   if (!firebase.getCurrentUsername()) {
     // not logged in!
     navigate("/");
@@ -20,7 +21,7 @@ const MainScreen = (props: any) => {
   // console
   return (
     <div className="wrapper">
-      <HeaderComponent name={user ? user.name : "No"} empty={empty} />
+      <HeaderComponent name={user ? user.name : ""} empty={empty} />
       {!empty ? (
         <ReceiptListComponent receipts={receiptList} />
       ) : (

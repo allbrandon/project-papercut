@@ -2,8 +2,14 @@
 @import "../../variables.scss";
 
 .account-heading {
+  .profile-image {
+    height: 84px;
+    width: 84px;
+    margin-bottom: $spacing-xs;
+  }
   .background {
     background-color: $main-green;
+    padding-bottom: $spacing-s;
   }
 
   .back-button-padding {
