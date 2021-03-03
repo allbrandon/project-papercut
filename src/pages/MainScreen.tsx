@@ -21,6 +21,7 @@ const MainScreen = (props: any) => {
   const [user] = useContext(UserContext);
   const [QRModalOpen, setQRModal] = useState(false);
   const [QRData, setQRData] = useState();
+  const [receipts, setReceipts] = useState<any[]>([]);
   const customStyles = {
     content: {
       top: "50%",
@@ -46,8 +47,17 @@ const MainScreen = (props: any) => {
   }
   // QR Mode
   const handleScan = (data: any) => {
-    if (data) {
-      setQRData(data);
+    if (data && typeof parseInt(data) == "number") {
+      if (!receipts.includes(data)) {
+        setReceipts([...receipts, data]);
+        // close modal then give alert successfully added
+        closeModal();
+        alert("Your receipt has sucessfully been added!");
+      }
+      // console.log(typeof parseInt(data));
+
+      console.log("scanned");
+      console.log(receipts);
     }
   };
   const handleError = (err: any) => {
@@ -86,7 +96,11 @@ const MainScreen = (props: any) => {
       <HeaderComponent name={user ? user.name : ""} empty={empty} />
 
       {!empty ? (
-        <ReceiptListComponent receipts={receiptList} />
+        <ReceiptListComponent
+          receipts={receipts.map(receiptIndex => {
+            return receiptList[receiptIndex];
+          })}
+        />
       ) : (
         <EmptyListComponent />
       )}
