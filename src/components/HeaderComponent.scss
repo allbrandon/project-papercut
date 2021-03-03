@@ -102,15 +102,12 @@ q {
   quotes: "" "";
 }
 .header__container {
+  // position: fixed;
+  // top: 0;
+  width: 100vw;
   display: flex;
   flex-flow: column nowrap;
-}
-
-.greeting {
-  // display: flex;
-  // flex-flow: column nowrap;
-  // padding-bottom: 1rem;
-  // margin: px;
+  background: #64bd79;
 }
 
 .greeting.a {

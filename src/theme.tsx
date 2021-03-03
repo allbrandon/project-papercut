@@ -3,7 +3,7 @@ export const colors = {
   darkaccentgreen: "hsl(134, 33, 45)",
   lightaccentgreen: "hsl(136, 70, 95)",
   lightaccentgreen2: "hsl(135, 57, 82)",
-  maingreen: "hsl(134, 40, 57)",
+  maingreen: "hsl(134, 40%, 57%)",
   // NEUTRALS
   subheadergrey: "hsl(210, 6%, 56%)",
   backgroundgrey: "hsl(210, 17%%, 98%)",
