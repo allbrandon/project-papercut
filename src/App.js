@@ -22,7 +22,6 @@ function App() {
     async function firebaseInit() {
       let val = await firebase.isInitialized();
       setFirebaseInitialized(val);
-      setUser([firebase.getUserDetails(), () => {}]);
       async function getReceipts() {
         let email = firebase.getCurrentEmail();
         // console.log(email);
@@ -40,7 +39,12 @@ function App() {
           console.log(e);
         }
       }
-      getReceipts();
+      if (firebase.getCurrentUsername()) {
+        setUser([firebase.getUserDetails(), () => {}]);
+        getReceipts();
+      } else {
+        setIsLoading(false);
+      }
     }
     firebaseInit();
 

@@ -116,7 +116,7 @@ const MainScreen = (props: any) => {
 
       <HeaderComponent name={user ? user.name : ""} empty={empty} />
 
-      {!empty ? (
+      {receipts.length > 0 ? (
         <ReceiptListComponent
           receipts={receipts.map((receiptIndex: any) => {
             return receiptList[receiptIndex];

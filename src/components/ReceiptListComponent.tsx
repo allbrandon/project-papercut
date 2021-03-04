@@ -40,7 +40,6 @@ export const ReceiptListComponent = ({
         {receipts.map(receipt => (
           <ReceiptCardComponent receiptInfo={receipt} />
         ))}
-        {console.log(receipts)}
       </div>
     </>
   );
