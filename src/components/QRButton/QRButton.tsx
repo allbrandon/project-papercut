@@ -19,8 +19,8 @@ const QRButton = ({ onClick }: any) => {
         background-color: ${colors.maingreen};
         box-shadow: ${shadows.button};
         position: absolute;
-        right: ${spacing.xl};
-        bottom: ${spacing.xl};
+        right: ${spacing.m};
+        bottom: ${spacing.m};
       `}
       onClick={onClick}
     >

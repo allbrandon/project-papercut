@@ -22,6 +22,23 @@ function App() {
       setFirebaseInitialized(val);
       setUser([firebase.getUserDetails(), () => {}]);
       // console.log(firebase.getUserDetails());
+      async function getReceipts() {
+        let email = firebase.getCurrentEmail();
+        // console.log(email);
+        try {
+          if (email) {
+            var docRef = firebase.firestore.collection("users").doc(email);
+            const userDetails = (await docRef.get()).data();
+            if (userDetails) {
+              console.log(userDetails.receipts);
+              setReceipts(userDetails.receipts);
+            }
+          }
+        } catch (e) {
+          console.log(e);
+        }
+      }
+      getReceipts();
     });
   }, []);
   // check auth after every render
@@ -80,8 +97,7 @@ function App() {
       <div>
         <Router>
           <WelcomeComponent path="/" />
-
-          <MainScreen path="/home" />
+          <MainScreen path="/home" receipts={receipts} />
           <TransactionComponent path="/receipt/:trans_id" />
           <SignUpComponent path="/signup" />
           <SignInComponent path="/signin" />

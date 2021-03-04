@@ -22,6 +22,7 @@ const MainScreen = (props: any) => {
   const [QRModalOpen, setQRModal] = useState(false);
   const [QRData, setQRData] = useState();
   const [receipts, setReceipts] = useState<any[]>([]);
+  // setReceipts(props.receipts);
   const customStyles = {
     content: {
       top: "50%",
@@ -35,29 +36,8 @@ const MainScreen = (props: any) => {
   // console.log(user);
   // get the receipts @ start
   useEffect(() => {
-    async function getReceipts() {
-      let email = firebase.getCurrentEmail();
-      console.log(email);
-      try {
-        if (email) {
-          var docRef = firebase.firestore.collection("users").doc(email);
-          const userDetails = (await docRef.get()).data();
-          if (userDetails) {
-            console.log(`firestore receipts is ${userDetails.receipts}`);
-
-            setReceipts(userDetails.receipts);
-          } else {
-            console.log(` details is ${userDetails}`);
-          }
-        } else {
-          console.log("dont have an email");
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    }
-    getReceipts();
-  }, []);
+    setReceipts(props.receipts);
+  });
   // update when receipts changes
   useEffect(() => {
     if (user && receipts.length > 0) {
