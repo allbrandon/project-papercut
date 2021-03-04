@@ -107,8 +107,24 @@ export const SignUpComponent = ({}: any) => {
     try {
       await firebase.register(name, email, password);
       if (firebase.auth.currentUser != null) {
-        firebase.auth.currentUser.sendEmailVerification();
+        // firebase.auth.currentUser.sendEmailVerification();
+        // add a user field into DB
+        firebase.firestore
+          .collection("users")
+          .doc(email)
+          .set({
+            name: name,
+            email: email,
+            receipts: []
+          })
+          .then(() => {
+            console.log("Document successfully written!");
+          })
+          .catch((error: any) => {
+            console.error("Error writing document: ", error);
+          });
       }
+      // save to database
       navigate("/home");
     } catch (error) {
       alert(error.message);

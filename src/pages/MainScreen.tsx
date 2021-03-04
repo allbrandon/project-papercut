@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import ReceiptListComponent from "../components/ReceiptListComponent";
 import "./MainScreen.scss";
 import HeaderComponent from "../components/HeaderComponent";
@@ -33,6 +33,43 @@ const MainScreen = (props: any) => {
     }
   };
   // console.log(user);
+  // get the receipts @ start
+  useEffect(() => {
+    async function getReceipts() {
+      let email = firebase.getCurrentEmail();
+      console.log(email);
+      try {
+        if (email) {
+          var docRef = firebase.firestore.collection("users").doc(email);
+          const userDetails = (await docRef.get()).data();
+          if (userDetails) {
+            console.log(`firestore receipts is ${userDetails.receipts}`);
+
+            setReceipts(userDetails.receipts);
+          } else {
+            console.log(` details is ${userDetails}`);
+          }
+        } else {
+          console.log("dont have an email");
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    getReceipts();
+  }, []);
+  // update when receipts changes
+  useEffect(() => {
+    if (user && receipts.length > 0) {
+      firebase.firestore
+        .collection("users")
+        //@ts-ignore
+        .doc(user.email)
+        .update({
+          receipts: receipts
+        });
+    }
+  }, [receipts]);
   if (!firebase.getCurrentUsername()) {
     // not logged in!
     navigate("/");
@@ -50,19 +87,18 @@ const MainScreen = (props: any) => {
     if (data && typeof parseInt(data) == "number") {
       if (!receipts.includes(data)) {
         setReceipts([...receipts, data]);
+
         // close modal then give alert successfully added
         closeModal();
         alert("Your receipt has sucessfully been added!");
       }
       // console.log(typeof parseInt(data));
-
-      console.log("scanned");
-      console.log(receipts);
     }
   };
   const handleError = (err: any) => {
     console.error(err);
   };
+
   return (
     <div className="wrapper">
       {QRModalOpen ? (

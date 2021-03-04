@@ -21,7 +21,7 @@ function App() {
     firebase.isInitialized().then(val => {
       setFirebaseInitialized(val);
       setUser([firebase.getUserDetails(), () => {}]);
-      console.log(firebase.getUserDetails());
+      // console.log(firebase.getUserDetails());
     });
   }, []);
   // check auth after every render
