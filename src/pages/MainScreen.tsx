@@ -37,19 +37,24 @@ const MainScreen = (props: any) => {
   // get the receipts @ start
   useEffect(() => {
     setReceipts(props.receipts);
-  });
+
+    console.log(props.receipts);
+  }, []);
   // update when receipts changes
   useEffect(() => {
-    if (user && receipts.length > 0) {
-      firebase.firestore
-        .collection("users")
-        //@ts-ignore
-        .doc(user.email)
-        .update({
-          receipts: receipts
-        });
+    if (receipts) {
+      if (user && receipts.length > 0) {
+        firebase.firestore
+          .collection("users")
+          //@ts-ignore
+          .doc(user.email)
+          .update({
+            receipts: receipts
+          });
+      }
     }
   }, [receipts]);
+  // useEffect(() => {})
   if (!firebase.getCurrentUsername()) {
     // not logged in!
     navigate("/");
@@ -66,7 +71,7 @@ const MainScreen = (props: any) => {
   const handleScan = (data: any) => {
     if (data && typeof parseInt(data) == "number") {
       if (!receipts.includes(data)) {
-        setReceipts([...receipts, data]);
+        setReceipts([...props.receipts, data]);
 
         // close modal then give alert successfully added
         closeModal();
@@ -113,7 +118,7 @@ const MainScreen = (props: any) => {
 
       {!empty ? (
         <ReceiptListComponent
-          receipts={receipts.map(receiptIndex => {
+          receipts={receipts.map((receiptIndex: any) => {
             return receiptList[receiptIndex];
           })}
         />

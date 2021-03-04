@@ -21,6 +21,8 @@
   padding: 2rem 0.8rem 2rem 0.2rem;
   box-shadow: $button-shadow;
   margin: 1rem;
+  min-width: 350px;
+  max-width: 350px;
 }
 
 .receipt__card__icon {

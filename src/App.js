@@ -14,14 +14,15 @@ import firebase from "./firebase";
 function App() {
   const [receipts, setReceipts] = useState([]);
   const [user, setUser] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const [firebaseInitialized, setFirebaseInitialized] = useState(false);
 
   useEffect(() => {
-    firebase.isInitialized().then(val => {
+    async function firebaseInit() {
+      let val = await firebase.isInitialized();
       setFirebaseInitialized(val);
       setUser([firebase.getUserDetails(), () => {}]);
-      // console.log(firebase.getUserDetails());
       async function getReceipts() {
         let email = firebase.getCurrentEmail();
         // console.log(email);
@@ -32,6 +33,7 @@ function App() {
             if (userDetails) {
               console.log(userDetails.receipts);
               setReceipts(userDetails.receipts);
+              setIsLoading(false);
             }
           }
         } catch (e) {
@@ -39,8 +41,14 @@ function App() {
         }
       }
       getReceipts();
-    });
+    }
+    firebaseInit();
+
+    // console.log(firebase.getUserDetails());
   }, []);
+  useEffect(() => {
+    console.log(receipts);
+  });
   // check auth after every render
   // useEffect(() => {
   //   // @ts-ignore
@@ -92,7 +100,9 @@ function App() {
   //   firebase.firestore.doc(`receiptTest/${id}`).delete();
   // };
 
-  return (
+  return isLoading ? (
+    <h1>Loading...</h1>
+  ) : (
     <UserContext.Provider value={user}>
       <div>
         <Router>

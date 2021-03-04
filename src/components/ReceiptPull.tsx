@@ -102,8 +102,24 @@ const receiptDetail: ReceiptInfo = {
   card: card_object,
   items: itemsList
 };
+const receiptDetail2: ReceiptInfo = {
+  id: 2,
+  store: "Coles",
+  storeId: 2,
+  centre: "1310 Bathurst City Centre",
+  category: "grocery",
+  address: "210 Howick St",
+  number: "02 6330 8007",
+  abn: "88 000 014 675",
+  date: "01/01/2020",
+  dateTime: "01/01/2020 1:05PM",
+  subtotal: 42.0,
+  total: 42.0,
+  card: card_object,
+  items: itemsList
+};
 
-export const receiptList = [receiptDetail, receiptDetail, receiptDetail];
+export const receiptList = [receiptDetail, receiptDetail2];
 
 export const receiptGrab = ({ trans_id }: any) => {
   for (var i = 0; i < receiptList.length; i++) {
